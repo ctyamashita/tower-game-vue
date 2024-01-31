@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="style.css">
-  <title>Cube WASD</title>
+  <title>Vue WASD</title>
   <script type="importmap">
     {
       "imports": {
@@ -17,14 +17,19 @@
 </head>
 <body>
   <div id="app">
-    <table id="board">
+    <table id="board" :class="board.isoView ? 'iso' : ''">
       <tr v-for="y in board.height">
-        <td v-for="x in board.width" :id="stringifyCoords({x: x, y: y})">
-          <div :id="isPlayer({x: x, y: y})" :class="isObject({x: x, y: y})"></div>
-          <div class="floor"></div>
-        </td>
+        <td v-for="x in board.width" :id="`${x}-${y}`" v-html="tileContent({x: x, y: y})" :style="`z-index: ${x+y}`"></td>
       </tr>
     </table>
+    <div id="keys-display" :class="board.isoView ? 'iso' : ''">
+      <button id="q-key">Q<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="w-key">W<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="e-key">E<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="a-key">A<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="s-key">S<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="d-key">D<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+    </div>
   </div>
   <!-- <script src="lib/projects.js" type="module"></script> -->
   <script src="lib/board.js" type="module"></script>

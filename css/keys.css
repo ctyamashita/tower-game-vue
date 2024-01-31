@@ -1,0 +1,66 @@
+#q-key, #w-key, #e-key, #a-key, #s-key, #d-key { position: relative; }
+
+
+#keys-display {
+  z-index: 999;
+  box-shadow: 0 0 0 0.5em rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: calc(var(--border-radius)/2);
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5em;
+  transition: var(--iso-animation-time);
+}
+
+#keys-display button {
+  border: none;
+  color: dimgray;
+  font-size: 1.5em;
+  border-radius: calc(var(--border-radius)/2);
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  height: 50px;
+  width: 50px;
+  transition: .2s;
+}
+
+#keys-display button:active,
+#keys-display button.pressed  {
+  background-color: darkgray;
+}
+
+#keys-display.iso button:active,
+#keys-display.iso button.pressed  {
+  transform: translate(.5em, .5em);
+  transition: .2s;
+}
+
+#keys-display.iso {
+  background-color: transparent;
+  box-shadow: 1.5em 1.5em 0 0.5em rgba(0, 0, 0, .3);
+  transition: var(--iso-animation-time);
+}
+
+#keys-display.iso button {
+  box-shadow: 2px 2px 0 0 white;
+}
+
+#keys-display button:active .l-wall,
+#keys-display button:active .r-wall,
+#keys-display button.pressed .l-wall,
+#keys-display button.pressed .r-wall {
+  opacity: 0;
+  transition: .2s;
+}
+
+#keys-display.iso button:active .l-wall,
+#keys-display.iso button:active .r-wall,
+#keys-display.iso button.pressed .l-wall,
+#keys-display.iso button.pressed .r-wall {
+  opacity: 1;
+  height: 50%;
+  transition: .2s;
+}

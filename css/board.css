@@ -1,0 +1,15 @@
+table#board {
+  border-spacing: 0;
+  transition: var(--iso-animation-time);
+}
+
+table#board td {
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+table#board td > div:not(#player, .spot) {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,218 @@
+/* floor */
+.floor {
+  position: absolute;
+  top: 0;
+  outline: solid var(--outline) rgba(255, 255, 255, .3);
+  outline-offset: calc(var(--outline) / -2);
+  box-shadow: 0 0 0 0 var(--shadow-color);
+  transition: var(--iso-animation-time);
+  background-color: lightgreen;
+}
+
+td:has(#player) .floor {
+  background: radial-gradient(var(--shadow-color) 30%, lightgreen 50%);
+}
+/* iso floor */
+  .iso .floor {
+    box-shadow: 2px 0px 0 0 var(--white);
+    transition: var(--iso-animation-time);
+    border-radius: var(--border-radius)
+  }
+/* iso floor end */
+/* floor end */
+
+/* water */
+.water .surface {
+  background: deepskyblue;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  transition: calc(var(--iso-animation-time)/2);
+}
+
+/* iso water */
+  .iso .water .surface {
+    opacity: .7;
+    transform: translate(25%, 25%);
+    transition: var(--iso-animation-time);
+  }
+/* iso water end */
+/* water */
+
+/* box */
+.box {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white) !important;
+  transition: var(--iso-animation-time);
+}
+
+.box, .box .r-wall,.box .l-wall {
+  outline: solid var(--outline) var(--white);
+  outline-offset: calc(var(--outline)/-2);
+  border-radius: var(--border-radius);
+}
+/* iso box */
+  .iso .box {
+    transform: translate(-73%, -73%);
+  }
+/* iso box end */
+
+/* high box */
+  .high.box {
+    background-color: gold !important;
+    outline-color: gold;
+    position: absolute;
+    top: 0;
+  }
+
+  .iso .high.box {
+    box-shadow: 2px 2px 0 0 var(--white);
+    transform: translate(-146%, -146%);
+  }
+
+  td:has(.high.box) .floor, td:has(#player) .high.box .floor {
+    background: var(--shadow-color) !important;
+  }
+
+  td:has(#player) .high.box {
+    opacity: .5;
+  }
+/* high box end*/
+/* box end */
+
+/* walls */
+.box-walls, .floor-walls, .water-walls, .key-walls {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  transition: var(--iso-animation-time);
+  transform: skew(45deg, -45deg);
+}
+
+.r-wall, .l-wall {
+  opacity: 0;
+  height: 0;
+  width: 50%;
+  transition: var(--iso-animation-time), opacity .5s calc(var(--iso-animation-time) * .9);
+}
+
+.r-wall {
+  transform: skewY(45deg);
+  background-color: var(--lightgray);
+}
+
+.l-wall {
+  transform: skewY(-45deg);
+  background-color: var(--gray);
+}
+
+.floor-walls .r-wall, .floor-walls .l-wall,
+.water-walls .l-wall, .water-walls .r-wall {
+  outline-color: transparent;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.high.box .r-wall {
+  background-color: orange;
+  outline-color: gold;
+}
+
+.high.box .l-wall {
+  background-color: darkorange;
+  outline-color: gold;
+}
+
+/* iso walls */
+  .iso .box-walls {
+    height: 100%;
+    left: 75%;
+    top: 75%;
+    transition: var(--iso-animation-time);
+  }
+
+  .iso .water-walls .r-wall, .iso .water-walls .l-wall {
+    opacity: 0;
+    height: 20%;
+  }
+
+  .iso tr td:last-child .water-walls .l-wall,
+  .iso tr:last-child td .water-walls .r-wall {
+    opacity: 1;
+    background-color: dodgerblue;
+    outline: none;
+  }
+
+  .iso .r-wall, .iso .l-wall {
+    opacity: 1;
+    height: 73%;
+    transition: calc(var(--iso-animation-time)/2);
+  }
+
+/* iso walls end */
+/* walls end */
+
+/* spot */
+  .spot {
+    height: 40%;
+    width: 40%;
+    top: 30%;
+    left: 30%;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(var(--white) 35%, lightcoral 37%);
+    transition: var(--iso-animation-time);
+  }
+
+  .spot > i {
+    font-size: .8em;
+    opacity: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: var(--iso-animation-time);
+  }
+
+  td:has(.spot) .floor {
+    background: radial-gradient(var(--shadow-color) 10%, lightgreen 30%);
+  }
+
+  td:has(#player) .spot {
+    background: radial-gradient(white 60%, crimson 62%);
+    transform: scale(2);
+    z-index: 1;
+  }
+
+  td:has(.high.box) #player {
+    background: radial-gradient(darkgray 20%, dimgrey 58%, lightgray);
+  }
+
+  td:has(#player) .spot > * { opacity: 1; }
+
+  /* iso spot */
+  .iso .spot > i {
+    opacity: 0;
+    transform: rotate(-45deg);
+    transition: var(--iso-animation-time);
+  }
+
+  .iso .spot {
+    text-align: center;
+    border-radius: 50% 50% 0;
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-75%) rotate(-45deg);
+    transition: var(--iso-animation-time);
+  }
+
+  .iso td:has(#player) .spot {
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-90%) rotate(-45deg) scale(2);
+    border-radius: 50%;
+  }
+  /* iso spot end */
+/* spot end */

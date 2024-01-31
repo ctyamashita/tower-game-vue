@@ -1,0 +1,16 @@
+.iso #player {
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%);
+  transition: transform var(--iso-animation-time);
+}
+
+#player {
+  width: var(--player-size);
+  height: var(--player-size);
+  opacity: .8;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(lightgray 20%, darkgrey 58%, white);
+  position: relative;
+  z-index: 1;
+  transition: transform var(--iso-animation-time);
+}
