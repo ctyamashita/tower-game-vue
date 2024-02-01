@@ -7,17 +7,18 @@
   background-color: rgba(0, 0, 0, .3);
   border-radius: calc(var(--border-radius)/2);
   position: absolute;
-  bottom: 8%;
-  right: 8%;
+  bottom: 0;
+  right: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: .5em;
   transition: var(--iso-animation-time);
+  margin: 0 1.5em 1.5em 0;
 }
 
 #keys-display button {
   border: none;
-  color: dimgray;
+  color: grey;
   font-size: 1.5em;
   border-radius: calc(var(--border-radius)/2);
   font-family: Poppins, sans-serif;
@@ -29,7 +30,8 @@
 
 #keys-display button:active,
 #keys-display button.pressed  {
-  background-color: darkgray;
+  background-color: var(--black);
+  color: white;
 }
 
 #keys-display.iso button:active,
@@ -42,6 +44,7 @@
   background-color: transparent;
   box-shadow: 1.5em 1.5em 0 0.5em rgba(0, 0, 0, .3);
   transition: var(--iso-animation-time);
+  margin: 0 2em 3.5em 0;
 }
 
 #keys-display.iso button {

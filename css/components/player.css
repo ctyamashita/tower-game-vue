@@ -1,15 +1,16 @@
 .iso #player {
   transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%);
-  transition: transform var(--iso-animation-time);
+  box-shadow: 0 0 0 var(--outline) dimgray, inset -.1em .1em .5em .2em lightgreen;
+  transition: transform var(--iso-animation-time), box-shadow var(--iso-animation-time);
 }
 
 #player {
   width: var(--player-size);
   height: var(--player-size);
-  opacity: .8;
+  box-shadow: 0 0 0 var(--outline) dimgray, inset 0 0 .5em .2em lightgreen;
   margin: 0 auto;
   border-radius: 50%;
-  background: radial-gradient(lightgray 20%, darkgrey 58%, white);
+  background: var(--player-color);
   position: relative;
   z-index: 1;
   transition: transform var(--iso-animation-time);

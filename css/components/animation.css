@@ -1,0 +1,11 @@
+@keyframes spot-idle {
+  0% { transform: scale(.8) }
+  50% { transform: scale(1) }
+  100% { transform: scale(.8) }
+}
+
+@keyframes iso-spot-idle {
+  0% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-90%) rotate(-45deg) }
+  50% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-80%) rotate(-45deg) }
+  100% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-90%) rotate(-45deg) }
+}

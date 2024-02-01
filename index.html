@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Vue WASD</title>
   <script type="importmap">
     {
@@ -17,11 +17,22 @@
 </head>
 <body>
   <div id="app">
-    <table id="board" :class="board.isoView ? 'iso' : ''">
-      <tr v-for="y in board.height">
-        <td v-for="x in board.width" :id="`${x}-${y}`" v-html="tileContent({x: x, y: y})" :style="`z-index: ${x+y}`"></td>
-      </tr>
-    </table>
+    <div id="menu">
+      <h1>Menu</h1>
+      <ul>
+        <li><a href="#">item 1</a></li>
+        <li><a href="#">item 2</a></li>
+        <li><a href="#">item 3</a></li>
+        <li><a href="#">item 4</a></li>
+      </ul>
+    </div>
+    <div id="board-container">
+      <table id="board" :class="board.isoView ? 'iso' : ''">
+        <tr v-for="y in board.height">
+          <td v-for="x in board.width" :id="`${x}-${y}`" v-html="tileContent({x: x, y: y})" :style="`z-index: ${x+y}`"></td>
+        </tr>
+      </table>
+    </div>
     <div id="keys-display" :class="board.isoView ? 'iso' : ''">
       <button id="q-key">Q<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
       <button id="w-key">W<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>

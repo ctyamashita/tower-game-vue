@@ -54,9 +54,17 @@ td:has(#player) .floor {
   outline-offset: calc(var(--outline)/-2);
   border-radius: var(--border-radius);
 }
+
+/* .box .r-wall,.box .l-wall {
+  outline: solid calc(var(--outline)/2) var(--white);
+  outline-offset: calc(var(--outline)/-4);
+} */
+
+
 /* iso box */
   .iso .box {
     transform: translate(-73%, -73%);
+    box-shadow: 2px 2px 0 2px var(--white);
   }
 /* iso box end */
 
@@ -64,12 +72,15 @@ td:has(#player) .floor {
   .high.box {
     background-color: gold !important;
     outline-color: gold;
+    /* background-color: darkgray !important;
+    outline-color: darkgray; */
     position: absolute;
     top: 0;
   }
 
   .iso .high.box {
-    box-shadow: 2px 2px 0 0 var(--white);
+    box-shadow: 2px 2px 0 2px var(--white);
+    /* box-shadow: 2px 2px 0 2px darkgray; */
     transform: translate(-146%, -146%);
   }
 
@@ -88,11 +99,15 @@ td:has(#player) .floor {
   position: absolute;
   top: 75%;
   left: 50%;
-  width: 100%;
+  width: 101%;
   height: 50%;
   display: flex;
   transition: var(--iso-animation-time);
   transform: skew(45deg, -45deg);
+}
+
+.key-walls {
+  width: 100%;
 }
 
 .r-wall, .l-wall {
@@ -121,9 +136,13 @@ td:has(#player) .floor {
 .high.box .r-wall {
   background-color: orange;
   outline-color: gold;
+  /* background-color: gray;
+  outline-color: darkgray; */
 }
 
 .high.box .l-wall {
+  /* background-color: dimgray;
+  outline-color: darkgray; */
   background-color: darkorange;
   outline-color: gold;
 }
@@ -165,8 +184,11 @@ td:has(#player) .floor {
     left: 30%;
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(var(--white) 35%, lightcoral 37%);
+    /* background: radial-gradient(lightcoral 35%, crimson 37%, darkred); */
+    background: radial-gradient(lightpink 35%, lightcoral 37%);
     transition: var(--iso-animation-time);
+    text-decoration: none;
+    color: var(--black);
   }
 
   .spot > i {
@@ -184,17 +206,21 @@ td:has(#player) .floor {
     background: radial-gradient(var(--shadow-color) 10%, lightgreen 30%);
   }
 
+  td:has(.spot) #player {
+    opacity: 0;
+  }
+
   td:has(#player) .spot {
-    background: radial-gradient(white 60%, crimson 62%);
+    background: radial-gradient(white 55%, crimson 57%, crimson 63%, white 65%);
     transform: scale(2);
     z-index: 1;
   }
 
   td:has(.high.box) #player {
-    background: radial-gradient(darkgray 20%, dimgrey 58%, lightgray);
+    background: var(--player-color-dark);
   }
 
-  td:has(#player) .spot > * { opacity: 1; }
+  td:has(#player) .spot > i { opacity: 1; }
 
   /* iso spot */
   .iso .spot > i {
@@ -206,7 +232,7 @@ td:has(#player) .floor {
   .iso .spot {
     text-align: center;
     border-radius: 50% 50% 0;
-    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-75%) rotate(-45deg);
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-90%) rotate(-45deg);
     transition: var(--iso-animation-time);
   }
 
