@@ -1,5 +1,6 @@
 [{
-  "className": "warrior",
+  "id": 1,
+  "class": "warrior",
   "attributes": {
     "atk": 5,
     "def": 5,
