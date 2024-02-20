@@ -1,6 +1,7 @@
 .iso #player {
   transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%);
-  box-shadow: 0 0 0 var(--outline) dimgray, inset -.1em .1em .5em .2em lightgreen;
+  /* box-shadow: 0 0 0 var(--outline) dimgray, inset -.1em .1em .5em .2em lightgreen; */
+  box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen;
   transition: transform var(--iso-animation-time), box-shadow var(--iso-animation-time);
 }
 

@@ -10,7 +10,7 @@
 }
 
 td:has(#player) .floor {
-  background: radial-gradient(var(--shadow-color) 30%, lightgreen 50%);
+  background: radial-gradient(var(--shadow-color) 10%, lightgreen 25%);
 }
 /* iso floor */
   .iso .floor {
@@ -79,7 +79,7 @@ td:has(#player) .floor {
   }
 
   .iso .high.box {
-    box-shadow: 2px 2px 0 2px var(--white);
+    box-shadow: 2px 2px 0 2px gold;
     /* box-shadow: 2px 2px 0 2px darkgray; */
     transform: translate(-146%, -146%);
   }
@@ -91,13 +91,17 @@ td:has(#player) .floor {
   td:has(#player) .high.box {
     opacity: .5;
   }
+
+  #board:has(td:has(#player, .high.box)) .high.box {
+    opacity: 0;
+  }
 /* high box end*/
 /* box end */
 
 /* walls */
 .box-walls, .floor-walls, .water-walls, .key-walls {
   position: absolute;
-  top: 75%;
+  top: 74%;
   left: 50%;
   width: 101%;
   height: 50%;
@@ -151,7 +155,7 @@ td:has(#player) .floor {
   .iso .box-walls {
     height: 100%;
     left: 75%;
-    top: 75%;
+    top: 74%;
     transition: var(--iso-animation-time);
   }
 
@@ -183,9 +187,11 @@ td:has(#player) .floor {
     top: 30%;
     left: 30%;
     position: absolute;
+    border: none;
     border-radius: 50%;
     /* background: radial-gradient(lightcoral 35%, crimson 37%, darkred); */
     background: radial-gradient(lightpink 35%, lightcoral 37%);
+    box-shadow: 0 0 0 var(--outline) darkred;
     transition: var(--iso-animation-time);
     text-decoration: none;
     color: var(--black);
@@ -207,16 +213,20 @@ td:has(#player) .floor {
   }
 
   td:has(.spot) #player {
-    opacity: 0;
+    /* opacity: 0; */
+    background: radial-gradient(yellow 20%, yellowgreen 50%, green 80%);
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(30%);
   }
 
   td:has(#player) .spot {
-    background: radial-gradient(white 55%, crimson 57%, crimson 63%, white 65%);
+    /* background: radial-gradient(var(--black) 55%, white 57%, white 63%, var(--black) 65%); */
+    background: radial-gradient(white 52%,crimson 54%);
+    /* color: white; */
     transform: scale(2);
     z-index: 1;
   }
 
-  td:has(.high.box) #player {
+  td:has(.high.box, .tree) #player {
     background: var(--player-color-dark);
   }
 
@@ -237,8 +247,14 @@ td:has(#player) .floor {
   }
 
   .iso td:has(#player) .spot {
-    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-90%) rotate(-45deg) scale(2);
-    border-radius: 50%;
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-420%) rotate(-45deg) scale(2);
+    font-size: .5em;
+  }
+
+  @media (min-width: 490px) {
+    .iso .spot i {
+      font-size: 1.5em;
+    }
   }
   /* iso spot end */
 /* spot end */

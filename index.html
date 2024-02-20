@@ -19,6 +19,7 @@
   <div id="app">
     <div id="menu">
       <h1>Menu</h1>
+      <hr>
       <ul>
         <li><a href="#">item 1</a></li>
         <li><a href="#">item 2</a></li>
@@ -34,14 +35,16 @@
       </table>
     </div>
     <div id="keys-display" :class="board.isoView ? 'iso' : ''">
-      <button id="q-key">Q<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
-      <button id="w-key">W<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
-      <button id="e-key">E<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
-      <button id="a-key">A<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
-      <button id="s-key">S<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
-      <button id="d-key">D<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="q-key" v-on:click="move('q')" >Q<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="w-key" v-on:click="move('w')">W<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="e-key" v-on:click="move('e')">E<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="a-key" v-on:click="move('a')">A<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="s-key" v-on:click="move('s')">S<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
+      <button id="d-key" v-on:click="move('d')">D<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
     </div>
   </div>
+  <div class="modal"></div>
+  <div class="bg"></div>
   <!-- <script src="lib/projects.js" type="module"></script> -->
   <script src="lib/board.js" type="module"></script>
 </body>

@@ -1,0 +1,15 @@
+[{
+  "className": "warrior",
+  "attributes": {
+    "atk": 5,
+    "def": 5,
+    "agi": 5,
+    "dex": 5,
+    "int": 5,
+    "luk": 5
+  },
+  "actions": [
+    "attack",
+    "charged attack"
+  ]
+}]

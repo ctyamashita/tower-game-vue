@@ -1,4 +1,5 @@
 [{
+  "id": "photo-ronin",
   "title": "Photo Ronin",
   "tag": "Discover new places<br>to take your photos",
   "img": "og_photo.jpg",
@@ -34,6 +35,7 @@
   ]
 },
 {
+  "id": "no-camp-no-life",
   "title": "No Camp<br>No Life",
   "tag": "Get the wheels<br>for the adventure<br>of your life!",
   "img": "camper1.jpg",
@@ -67,6 +69,7 @@
   ]
 },
 {
+  "id": "movie-watchlist",
   "title": "Movie<br>Watchlist",
   "tag": "Create lists for your<br>favorite movies!",
   "img": "watchlist-portrait.png",
@@ -92,6 +95,7 @@
   "team": ["Celso Takeshi Yamashita"]
 },
 {
+  "id": "binge-watcher",
   "title": "Binge<br>Watcher",
   "tag": "Search for your next<br>series/movie to watch!",
   "img": "binge-watcher-cover.png",
@@ -116,6 +120,7 @@
   "team":["Celso Takeshi Yamashita"]
 },
 {
+  "id": "ee-demo",
   "title": "Equal Entry<br>Web VR Demo",
   "tag": "Exploring low-vision<br>accessibility on VR!",
   "img": "EE-Demo-cover-2.png",
@@ -148,6 +153,7 @@
   "team":["Celso Takeshi Yamashita"]
 },
 {
+  "id": "chat-room",
   "title": "Chat Room",
   "tag": "Join the Channel<br> from your batch!",
   "img": "simple-chat-cover.png",
@@ -171,6 +177,7 @@
   "team":["Celso Takeshi Yamashita"]
 },
 {
+  "id": "speech-to-text",
   "title": "Speech to Text",
   "tag": "Transcript your words<br> into text",
   "img": "",
@@ -194,6 +201,7 @@
   "team":["Celso Takeshi Yamashita"]
 },
 {
+  "id": "csv-editor",
   "title": "CSV Editor",
   "tag": "Vizualize tables<br> from CSV files",
   "img": "",
