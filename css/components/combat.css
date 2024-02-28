@@ -1,0 +1,125 @@
+.turn-count {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+/* Status Cards */
+.player-container, .enemy-container {
+  display: grid;
+}
+
+.player-container {
+  align-items: end;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end;
+}
+
+.enemy-container {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  flex-grow: 1;
+}
+
+#enemy-model {
+  scale: -1 1;
+}
+
+#enemy-model, #player-model {
+  margin: auto;
+}
+
+#enemy-model img, #player-model img { height: 30vh; }
+
+#enemy-stats, #player-stats {
+  padding: 1em 1em 0.5em 1em;
+  background-color: #00e1c2;
+  height: fit-content;
+  width: 30vw;
+}
+
+#enemy-stats {
+  border-radius: 0 0 8px 0;
+}
+
+#player-stats {
+  border-radius: 8px 0 0 0;
+}
+
+#player-stats .bar .bar-fill {
+  transition-delay: .5s;
+}
+
+.job {
+  display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    padding-right: 12px;
+    background: rgba(255, 255, 255, .7);
+    width: fit-content;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-top: 6px;
+}
+
+.job img { height: 20px; }
+
+.job p {
+  margin: 0;
+  font-size: .8em;
+}
+
+/* Animations */
+.atk-hit, .atk-miss {
+  animation-duration: var(--turn-animation-time);
+}
+
+.player-atk, .enemy-hit {
+  animation-duration: calc(var(--turn-animation-time)/2);
+}
+
+#player-model .atk-hit { animation-name: player-attack-hit; }
+
+#enemy-model .atk-hit { animation-name: enemy-attack-hit; }
+
+#player-model .atk-miss { animation-name: player-attack-miss; }
+
+#enemy-model .atk-miss { animation-name: enemy-attack-miss; }
+
+.player-atk { animation-name: player-attack; }
+
+.enemy-hit { animation-name: enemy-hit; }
+
+#enemy-model p {
+  transform: scaleX(-1);
+}
+
+#enemy-model, #player-model {
+  position: relative;
+}
+
+#enemy-model p, #player-model p {
+  position: absolute;
+  font-weight: 900;
+  top: -15%;
+  left: 50%;
+  transition: calc(var(--turn-animation-time)/3) ease-in-out;
+}
+
+#enemy-model p.damage, #player-model p.damage {
+  color: crimson;
+}
+
+#enemy-model p:empty, #player-model p:empty {
+  opacity: 0;
+  top: 0;
+  transition: calc(var(--turn-animation-time)/3) ease-in-out;
+}
+
+#player-model p {
+  transition-delay: calc(var(--turn-animation-time)/2);
+}

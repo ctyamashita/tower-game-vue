@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <script src="https://kit.fontawesome.com/b6f21dd2ae.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Vue WASD</title>
   <script type="importmap">
@@ -18,19 +18,24 @@
 <body>
   <div id="app">
     <div id="menu">
-      <h1>Menu</h1>
-      <hr>
-      <ul>
-        <li><a href="#">item 1</a></li>
-        <li><a href="#">item 2</a></li>
-        <li><a href="#">item 3</a></li>
-        <li><a href="#">item 4</a></li>
-      </ul>
+      <div class="job"><img v-bind:src="'/images/' + player.job + '-icon.png'"><p>{{player.job}}_lvl.{{player.lvl}}</p></div>
+      <div class="bar-container">
+        <i class="fa-solid fa-heart"></i><span class="bar"><span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span></span>
+      </div>
+      <div class="bar-container">
+        <i class="fa-solid fa-diamond"></i><span class="bar"><span class="bar-fill" :style="`width: ${player.xp}%`"></span></span>
+      </div>
+      <div>
+        <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`">stat_points{{player.points > 0 ? `(${player.points})` : ''}}</button>
+        <table class="stats-table">
+          <tr v-for="attr in Object.keys(player.attributes)"><th>{{attr}}</th><td><p>{{player.attributes[attr]}}</p><button class="plus-btn" v-on:click="updateAttribute(attr)"><i class="fa-solid fa-circle-plus"></i></button></td></tr>
+        </table>
+      </div>
     </div>
     <div id="board-container">
       <table id="board" :class="board.isoView ? 'iso' : ''">
         <tr v-for="y in board.height">
-          <td v-for="x in board.width" :id="`${x}-${y}`" v-html="tileContent({x: x, y: y})" :style="`z-index: ${x+y}`"></td>
+          <td v-for="x in board.width" :id="`${x}-${y}`" v-html="tileContent({x: x, y: y})" :style="`z-index: ${x+y}; animation-delay: ${Math.sqrt(x/y)}s`"></td>
         </tr>
       </table>
     </div>
@@ -42,9 +47,47 @@
       <button id="s-key" v-on:click="move('s')">S<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
       <button id="d-key" v-on:click="move('d')">D<div class="key-walls"><div class="r-wall"></div><div class="l-wall"></div></div></button>
     </div>
+    <div class="modal">
+      <div class="modal-content-cty">
+        <div class="modal-header-cty bg-dark">
+          <h4 class="modal-title text-white">Battle!</h4>
+          <button type="button" class="btn-close-white" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+        </div>
+        <div class="modal-body">
+          <p class="turn-count"><small>turn {{turnCount}}</small></p>
+          <div class="enemy-container">
+            <div id="enemy-stats">
+              <div class="bar-container">
+                <i class="fa-solid fa-heart"></i><span class="bar"><span class="bar-fill" :style="`width: ${remainingHP(enemy)}%`"></span></span>
+              </div>
+              <div class="job"><img v-bind:src="'/images/' + enemy.job + '-icon.png'"><p>{{enemy.job}}</p></div>
+            </div>
+            <div id="enemy-model">
+              <p :class="player.turnDamage == 'miss' ? 'miss' : 'damage'">{{player.turnDamage}}</p>
+              <img v-bind:src="'/images/' + enemy.job + '.png'">
+            </div>
+          </div>
+          <div class="player-container">
+            <div id="player-model">
+              <p :class="enemy.turnDamage == 'miss' ? 'miss' : 'damage'">{{enemy.turnDamage}}</p>
+              <img v-bind:src="'/images/' + player.job + '.png'">
+            </div>
+            <div id="player-stats">
+              <div class="bar-container">
+                <i class="fa-solid fa-heart"></i><span class="bar"><span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span></span>
+              </div>
+              <div class="job"><img v-bind:src="'/images/' + player.job + '-icon.png'"><p>{{player.job}}</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer-cty bg-dark">
+          <button id="atk-btn" v-on:click="combatTurn()">Attack</button>
+          <button>Run</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg"></div>
   </div>
-  <div class="modal"></div>
-  <div class="bg"></div>
   <!-- <script src="lib/projects.js" type="module"></script> -->
   <script src="lib/board.js" type="module"></script>
 </body>

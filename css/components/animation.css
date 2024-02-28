@@ -6,3 +6,75 @@
   80% {opacity: 0.8;}
   100% {opacity: 1; transform: translateY(0)}
 }
+
+@keyframes show-blocks {
+  0% {opacity: 0; transform: translate(-30%, -30%)}
+  100% {opacity: 1; transform: translate(0, 0)}
+}
+
+@keyframes heart-show {
+  0% {opacity: 0; transform: translate(0%, 0%) rotate(-45deg) scaleY(1.5)}
+  50% {opacity: 1; transform: translate(-200%, -200%) rotate(-45deg) scaleY(1.5)}
+  100% {opacity: 0;}
+}
+
+@keyframes player-attack-hit {
+  0%   { transform: translateX(0px); }
+  10%  { transform: translateX(-20px); }
+  20%  { transform: translateX(40px); }
+  30% { transform: translateX(0px); }
+  60%  { opacity: 1; filter: invert(0%); }
+  70%  { opacity: 0; transform: translateX(0px); }
+  80%  { opacity: 1; transform: translateX(-10px); filter: invert(70%);}
+  90%  { opacity: 0; }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+@keyframes enemy-attack-hit {
+  0%  { opacity: 1; filter: invert(0%);}
+  10%  { opacity: 0; transform: translateX(0px);}
+  20%  { opacity: 1; transform: translateX(-10px); filter: invert(70%);}
+  30%  { opacity: 0;}
+  40% { opacity: 1; transform: translateX(0px);}
+  70%   { transform: translateX(0px); }
+  80%  { transform: translateX(-20px); }
+  90%  { transform: translateX(40px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes player-attack-miss {
+  0%   { transform: translateX(0px); }
+  10%  { transform: translateX(-20px); }
+  20%  { transform: translateX(40px); }
+  50% { transform: translateX(0px);}
+  60%  { transform: translateX(0px); }
+  90%  { transform: translateX(-40px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes enemy-attack-miss {
+  0%   { transform: translateX(0px); }
+  10%  { transform: translateX(0px); }
+  20%  { transform: translateX(-40px); }
+  50% { transform: translateX(0px); }
+  60%  { transform: translateX(-20px); }
+  90%  { transform: translateX(40px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes player-attack {
+  0%   { transform: translateX(0px); }
+  10%  { transform: translateX(-20px); }
+  20%  { transform: translateX(40px); }
+  30% { transform: translateX(0px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes enemy-hit {
+  0%   { transform: translateX(0px); }
+  30%  { opacity: 1; filter: invert(0%); }
+  70%  { opacity: 0; transform: translateX(0px); }
+  80%  { opacity: 1; transform: translateX(-10px); filter: invert(70%);}
+  90%  { opacity: 0; }
+  100% { opacity: 1; transform: translateX(0px); }
+}

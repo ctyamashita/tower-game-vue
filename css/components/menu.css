@@ -2,48 +2,123 @@
   position: absolute;
   top: 1em;
   left: 1em;
-  background-color: whitesmoke;
+  background-color: lightgray;
   padding: 1em;
   border-radius: calc(var(--border-radius) * 2);
   z-index: 999;
   box-shadow: inset 0 0 0 4px var(--black);
+  display: grid;
+  gap: 8px;
+}
+
+#menu .bar-fill {
+  transition-delay: .5s;
+}
+
+#menu .bar-container:first-child {
+  margin-bottom: 4px;
 }
 
 #menu hr {
   margin-bottom: 1em;
 }
 
-#menu h1, #menu li {
+#menu .stats-title {
+  color: var(--black);
+  background: white;
+  text-align: center;
+  width: 100%;
+  padding: 4px 0;
+  border: none;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+#menu .stats-title.points-available {
+  background-color: gold;
   color: var(--black);
 }
 
-#menu li {
-  display: grid;
+#menu :has(.points-available) .plus-btn {
+  display: block;
 }
 
-#menu li a {
-  background-color: whitesmoke;
-  border-radius: var(--border-radius);
-  box-shadow: inset 0 0 0 2px var(--black), 4px 4px 0 0 lightgray;
-  padding: .3em .6em;
-  display: inline-block;
-  text-decoration: none;
-  font-family: Poppins, sans-serif;
+#menu .expand {
+  box-shadow: inset 0 0 0 2px white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#menu .expand .stats-title {
+  border-radius: 4px 4px 0 0;
   color: var(--black);
-  transition: .3s;
+  background-color: white;
 }
 
-#menu li a:hover, #menu li a:focus {
-  background-color: orange;
-  transform: translateY(4px);
-  box-shadow: inset 0 0 0 2px var(--black);
-  transition: .3s;
+#menu .stats-table {
+  width: 100%;
+  border-spacing: 0;
 }
 
-#menu ul {
-  list-style: none;
+#menu th, #menu td {
+  font-size: 12px;
+}
+
+#menu .job {
   margin: 0;
+  background: transparent;
+  border-radius: 0;
+  border-bottom: solid;
+}
+
+#menu .job p {
+  font-weight: 900;
+  font-size: 1em;
+}
+
+#menu tr:nth-child(even) {
+  background: white;
+}
+
+#menu .stats-table th {
+  text-align: start;
+  padding-left: 8px;
+  font-variant: small-caps;
+}
+
+#menu .stats-table td {
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+
+#menu .stats-table p {
+  margin: 0;
+  line-height: 2;
+}
+
+#menu .stats-table {
+  display: none;
+}
+
+#menu .expand .stats-table {
+  display: table;
+}
+
+#menu .plus-btn {
   padding: 0;
-  display: grid;
-  gap: .8em;
+  margin: 0;
+  border: none;
+  color: var(--black);
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+#menu .plus-btn:disabled {
+  display: none;
 }

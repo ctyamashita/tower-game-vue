@@ -14,7 +14,7 @@ td:has(#player) .floor {
 }
 /* iso floor */
   .iso .floor {
-    box-shadow: 2px 0px 0 0 var(--white);
+    /* box-shadow: 2px 0px 0 0 var(--white); */
     transition: var(--iso-animation-time);
     border-radius: var(--border-radius)
   }
@@ -103,7 +103,7 @@ td:has(#player) .floor {
   position: absolute;
   top: 74%;
   left: 50%;
-  width: 101%;
+  width: 100%;
   height: 50%;
   display: flex;
   transition: var(--iso-animation-time);
@@ -139,6 +139,7 @@ td:has(#player) .floor {
 
 .high.box .r-wall {
   background-color: orange;
+  /* background: repeating-linear-gradient(45deg, orange 6%,orange 12%, gold 12%, gold 18%); */
   outline-color: gold;
   /* background-color: gray;
   outline-color: darkgray; */
@@ -148,6 +149,7 @@ td:has(#player) .floor {
   /* background-color: dimgray;
   outline-color: darkgray; */
   background-color: darkorange;
+  /* background: repeating-linear-gradient(-45deg, darkorange 6%,darkorange 12%, orange 12%, orange 18%); */
   outline-color: gold;
 }
 

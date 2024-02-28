@@ -1,0 +1,32 @@
+td:has(#player) {
+  position: relative;
+}
+
+.portal {
+  top: 0;
+  position: absolute;
+}
+
+#beacon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10%;
+  width: 10%;
+  background: white;
+  transition: var(--iso-animation-time);
+  transform: rotate(-45deg) scaleY(1) translateY(-55%);
+  border-radius: 50%;
+}
+
+.iso #beacon {
+  background: linear-gradient(0deg, white, transparent);
+  top: 0;
+  left: 45%;
+  height: 100%;
+  width: 10%;
+  margin: 0 auto;
+  transform: rotate(-45deg) scaleY(4) translateY(-55%);
+  border-radius: 2px;
+  transition: var(--iso-animation-time);
+}

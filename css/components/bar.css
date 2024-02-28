@@ -1,0 +1,32 @@
+.bar-container {
+  display: flex;
+  gap: 8px;
+}
+
+.bar-container small {
+  margin: 0;
+  width: 2ch;
+  font-weight: 700;
+}
+
+.bar-container i {
+  color: var(--black);
+}
+
+.bar {
+  flex-grow: 1;
+  border: solid 2px var(--black);
+  position: relative;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, .5);
+}
+
+.bar .bar-fill {
+  width: 0;
+  background-color: var(--black);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: .3s;
+}

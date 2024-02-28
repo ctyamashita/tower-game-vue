@@ -7,6 +7,8 @@ table#board td {
   position: relative;
   text-align: center;
   padding: 0;
+  animation: show-blocks 1s forwards;
+  opacity: 0;
 }
 
 table#board td > div:not(#player, .spot) {

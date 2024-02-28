@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
-
 @import url('components/board.css');
 @import url('components/blocks.css');
 @import url('components/keys.css');
@@ -8,7 +6,10 @@
 @import url('components/menu.css');
 @import url('components/tent.css');
 @import url('components/tree.css');
+@import url('components/portal.css');
 @import url('components/modal.css');
+@import url('components/combat.css');
+@import url('components/bar.css');
 
 :root {
   --border-radius: .2em;
@@ -22,6 +23,8 @@
   --player-size: 30%;
   --player-color: radial-gradient(rgba(211, 211, 211, .7) 20%, rgba(169, 169, 169, .7) 58%, rgba(255, 255, 255, .7));
   --player-color-dark: radial-gradient(rgba(169, 169, 169, .7) 20%, rgba(105, 105, 105, .7) 58%, rgba(211, 211, 211, .7));
+  --turn-animation-time: 1s;
+  --spacing: .8em
 }
 
 body {
@@ -31,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   background: radial-gradient(lightblue, darkcyan 70%);
-  font-family: Poppins, sans-serif;
+  font-family: monospace;
   height: 100vh;
   overflow: hidden;
 }

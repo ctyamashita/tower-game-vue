@@ -1,16 +1,96 @@
 [{
   "id": 1,
-  "class": "warrior",
+  "job": "warrior",
+  "hp": 36,
+  "max_hp": 36,
+  "isDead": false,
   "attributes": {
-    "atk": 5,
-    "def": 5,
-    "agi": 5,
-    "dex": 5,
-    "int": 5,
-    "luk": 5
+    "atk": 8,
+    "def": 12,
+    "agi": 6,
+    "dex": 6,
+    "mag": 2,
+    "luk": 2
   },
   "actions": [
     "attack",
     "charged attack"
   ]
-}]
+},
+{
+  "id": 2,
+  "job": "ranger",
+  "hp": 12,
+  "max_hp": 12,
+  "isDead": false,
+  "attributes": {
+    "atk": 6,
+    "def": 4,
+    "agi": 6,
+    "dex": 12,
+    "mag": 2,
+    "luk": 6
+  },
+  "actions": [
+    "attack",
+    "charged attack"
+  ]
+},
+{
+  "id": 3,
+  "job": "ninja",
+  "hp": 12,
+  "max_hp": 12,
+  "isDead": false,
+  "attributes": {
+    "atk": 2,
+    "def": 4,
+    "agi": 12,
+    "dex": 6,
+    "mag": 2,
+    "luk": 10
+  },
+  "actions": [
+    "attack",
+    "charged attack"
+  ]
+},
+{
+  "id": 4,
+  "job": "monk",
+  "hp": 30,
+  "max_hp": 30,
+  "isDead": false,
+  "attributes": {
+    "atk": 6,
+    "def": 10,
+    "agi": 4,
+    "dex": 6,
+    "mag": 8,
+    "luk": 2
+  },
+  "actions": [
+    "attack",
+    "charged attack"
+  ]
+},
+{
+  "id": 5,
+  "job": "necromancer",
+  "hp": 30,
+  "max_hp": 30,
+  "isDead": false,
+  "attributes": {
+    "atk": 6,
+    "def": 10,
+    "agi": 2,
+    "dex": 6,
+    "mag": 10,
+    "luk": 2
+  },
+  "actions": [
+    "attack",
+    "charged attack"
+  ]
+}
+]
