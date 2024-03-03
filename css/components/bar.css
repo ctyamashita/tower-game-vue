@@ -11,6 +11,7 @@
 
 .bar-container i {
   color: var(--black);
+  width: 1.5ch;
 }
 
 .bar {

@@ -2,9 +2,27 @@ td:has(#player) {
   position: relative;
 }
 
+td:has(.portal) #player {
+  mix-blend-mode: hard-light;
+}
+
+.iso td:has(.portal) #player {
+  animation: 3s ascend 1s forwards;
+}
+
+td:has(.portal) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .portal {
-  top: 0;
   position: absolute;
+  width: 50% !important;
+  height: 50% !important;
+  border-radius: 50%;
+  background: repeating-radial-gradient(cadetblue, cadetblue 2px, transparent 2px, transparent 4px);
+  animation: portal 3s infinite;
 }
 
 #beacon {
@@ -20,13 +38,13 @@ td:has(#player) {
 }
 
 .iso #beacon {
-  background: linear-gradient(0deg, white, transparent);
-  top: 0;
-  left: 45%;
-  height: 100%;
-  width: 10%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, .6), transparent);
+  top: -270%;
+  left: 30%;
+  height: 700%;
+  width: 100%;
   margin: 0 auto;
-  transform: rotate(-45deg) scaleY(4) translateY(-55%);
-  border-radius: 2px;
+  transform: rotate(-45deg) scaleY(1.5) translateY(-50%);
+  border-radius: 14px;
   transition: var(--iso-animation-time);
 }

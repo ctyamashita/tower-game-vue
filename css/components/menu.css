@@ -33,7 +33,6 @@
   border-radius: 4px;
   line-height: 1.5;
   font-weight: 700;
-  font-family: monospace;
 }
 
 #menu .stats-title.points-available {
@@ -42,7 +41,7 @@
 }
 
 #menu :has(.points-available) .plus-btn {
-  display: block;
+  display: contents;
 }
 
 #menu .expand {
@@ -62,10 +61,6 @@
   border-spacing: 0;
 }
 
-#menu th, #menu td {
-  font-size: 12px;
-}
-
 #menu .job {
   margin: 0;
   background: transparent;
@@ -76,6 +71,14 @@
 #menu .job p {
   font-weight: 900;
   font-size: 1em;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+#menu .job p .lvl-number {
+  font-size: 1.5em;
+  line-height: 3px;
 }
 
 #menu tr:nth-child(even) {
@@ -86,19 +89,20 @@
   text-align: start;
   padding-left: 8px;
   font-variant: small-caps;
+  font-size: 1.2em;
 }
 
 #menu .stats-table td {
   padding-right: 8px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: end;
   gap: 8px;
 }
 
 #menu .stats-table p {
   margin: 0;
-  line-height: 2;
+  font-size: 1.2em;
 }
 
 #menu .stats-table {
@@ -121,4 +125,21 @@
 
 #menu .plus-btn:disabled {
   display: none;
+}
+
+.floor-display {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  margin: 0;
+  font-size: 1.5em;
+  background: var(--black);
+  padding: 0.25em 0.5em;
+  color: white;
+  border-radius: 50px;
+}
+
+.floor-display span {
+  font-size: 1.5em;
+  line-height: 0;
 }

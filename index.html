@@ -18,20 +18,21 @@
 <body>
   <div id="app">
     <div id="menu">
-      <div class="job"><img v-bind:src="'/images/' + player.job + '-icon.png'"><p>{{player.job}}_lvl.{{player.lvl}}</p></div>
+      <div class="job"><img v-bind:src="'/images/' + player.job + '-icon.png'"><p>[ {{player.job}} ] - <span><small>lvl</small><span class="lvl-number">{{player.lvl}}</span></span></p></div>
       <div class="bar-container">
         <i class="fa-solid fa-heart"></i><span class="bar"><span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span></span>
       </div>
       <div class="bar-container">
-        <i class="fa-solid fa-diamond"></i><span class="bar"><span class="bar-fill" :style="`width: ${player.xp}%`"></span></span>
+        <i class="fa-solid fa-book"></i><span class="bar"><span class="bar-fill" :style="`width: ${player.xp}%`"></span></span>
       </div>
       <div>
-        <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`">stat_points{{player.points > 0 ? `(${player.points})` : ''}}</button>
+        <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`">attributes{{player.points > 0 ? `(${player.points})` : ''}}</button>
         <table class="stats-table">
           <tr v-for="attr in Object.keys(player.attributes)"><th>{{attr}}</th><td><p>{{player.attributes[attr]}}</p><button class="plus-btn" v-on:click="updateAttribute(attr)"><i class="fa-solid fa-circle-plus"></i></button></td></tr>
         </table>
       </div>
     </div>
+    <p class="floor-display"><small>floor.</small><span>{{floor}}</span></p>
     <div id="board-container">
       <table id="board" :class="board.isoView ? 'iso' : ''">
         <tr v-for="y in board.height">

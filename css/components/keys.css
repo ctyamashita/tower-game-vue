@@ -21,7 +21,7 @@
   color: grey;
   font-size: 1.5em;
   border-radius: calc(var(--border-radius)/2);
-  font-family: Poppins, sans-serif;
+  /* font-family: Poppins, sans-serif; */
   font-weight: 700;
   height: 50px;
   width: 50px;

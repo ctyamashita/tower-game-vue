@@ -51,6 +51,8 @@ body:has(.modal.expand) .bg {
 .modal-content-cty {
   position: relative;
   display: flex;
+  width: 100%;
+  max-width: 600px;
   flex-direction: column;
   pointer-events: auto;
   background-color: rgb(230, 230, 230);
@@ -114,10 +116,6 @@ body:has(.modal.expand) .bg {
 
   .list-inline {
     padding-left: 16px;
-  }
-
-  .modal.expand {
-    width: 70vw;
   }
 }
 

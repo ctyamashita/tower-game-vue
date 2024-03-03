@@ -1,3 +1,5 @@
+/* Modal Animation */
+
 @keyframes show {
   0% {opacity: 0; transform: translateY(-10%)}
   20% {opacity: 0.2;}
@@ -6,6 +8,8 @@
   80% {opacity: 0.8;}
   100% {opacity: 1; transform: translateY(0)}
 }
+
+/* Board Animations */
 
 @keyframes show-blocks {
   0% {opacity: 0; transform: translate(-30%, -30%)}
@@ -17,6 +21,26 @@
   50% {opacity: 1; transform: translate(-200%, -200%) rotate(-45deg) scaleY(1.5)}
   100% {opacity: 0;}
 }
+
+@keyframes portal {
+  0% { filter: hue-rotate(0); transform: scale(1); }
+  50% { filter: hue-rotate(180deg); transform: scale(1.1); }
+  100% {filter: hue-rotate(0deg); transform: scale(1); }
+}
+
+@keyframes ascend {
+  0% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%); background: white; box-shadow: 0 0 0 0 white, inset 0 0 0 1em rgba(255,255,255,.3); }
+  70% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-500%); background: white; box-shadow: 0 0 1em 1em rgba(255,255,255,.6); }
+  100% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-800%) scale(0); background: white; box-shadow: 0 0 1em 0 white;}
+}
+
+@keyframes land {
+  0% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-800%) scale(0); box-shadow: 0 0 1em 0 white;  opacity: 1;}
+  30% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-500%); box-shadow: 0 0 0 var(--outline) dimgray, inset 0 0 0 1em rgba(255,255,255,.3), 0 0 1em 1em rgba(255,255,255,.6);  opacity: 1;}
+  100% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%); box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen;  opacity: 1;}
+}
+
+/* Combat Animations */
 
 @keyframes player-attack-hit {
   0%   { transform: translateX(0px); }

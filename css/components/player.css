@@ -5,6 +5,11 @@
   transition: transform var(--iso-animation-time), box-shadow var(--iso-animation-time);
 }
 
+.iso #player.spawn {
+  opacity: 0;
+  animation: 3s land 1s forwards;
+}
+
 #player {
   width: var(--player-size);
   height: var(--player-size);
