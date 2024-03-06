@@ -39,6 +39,11 @@
   30% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-500%); box-shadow: 0 0 0 var(--outline) dimgray, inset 0 0 0 1em rgba(255,255,255,.3), 0 0 1em 1em rgba(255,255,255,.6);  opacity: 1;}
   100% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%); box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen;  opacity: 1;}
 }
+@keyframes land-night {
+  0% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-800%) scale(0); box-shadow: 0 0 1em 0 white;  opacity: 1;}
+  30% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-500%); box-shadow: 0 0 0 var(--outline) dimgray, inset 0 0 0 1em rgba(255,255,255,.3), 0 0 1em 1em rgba(255,255,255,.6);  opacity: 1;}
+  100% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%); box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen, 0 0 .5em 0 white;  opacity: 1;}
+}
 
 /* Combat Animations */
 

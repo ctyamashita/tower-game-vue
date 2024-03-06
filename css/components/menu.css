@@ -62,10 +62,8 @@
 }
 
 #menu .job {
-  margin: 0;
-  background: transparent;
-  border-radius: 0;
-  border-bottom: solid;
+  padding-bottom: 4px;
+  border-bottom: solid 2px;
 }
 
 #menu .job p {

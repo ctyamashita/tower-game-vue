@@ -44,8 +44,9 @@
   transition: var(--iso-animation-time);
 }
 
+td:has(.tree):has(#player) .floor,
 td:has(.tree) .floor {
-  background: radial-gradient(var(--shadow-color) 40%, lightgreen 60%) !important;
+  background: radial-gradient(var(--shadow-color) 40%, lightgreen 60%);
   transition: var(--iso-animation-time);
 }
 

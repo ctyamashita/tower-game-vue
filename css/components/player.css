@@ -10,6 +10,10 @@
   animation: 3s land 1s forwards;
 }
 
+.night .iso #player.spawn {
+  animation: 3s land-night 1s forwards;
+}
+
 #player {
   width: var(--player-size);
   height: var(--player-size);

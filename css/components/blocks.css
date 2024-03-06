@@ -64,7 +64,7 @@ td:has(#player) .floor {
 /* iso box */
   .iso .box {
     transform: translate(-73%, -73%);
-    box-shadow: 2px 2px 0 2px var(--white);
+    box-shadow: .1em .1em 0 .1em var(--white);
   }
 /* iso box end */
 
@@ -79,8 +79,8 @@ td:has(#player) .floor {
   }
 
   .iso .high.box {
-    box-shadow: 2px 2px 0 2px gold;
-    /* box-shadow: 2px 2px 0 2px darkgray; */
+    box-shadow: .1em .1em 0 .1em gold;
+    /* box-shadow: .1em .1em 0 .1em darkgray; */
     transform: translate(-146%, -146%);
   }
 
@@ -199,7 +199,7 @@ td:has(#player) .floor {
     color: var(--black);
   }
 
-  .spot > i {
+  .spot > .material-symbols-outlined {
     font-size: .8em;
     opacity: 0;
     margin: 0 auto;
@@ -232,10 +232,10 @@ td:has(#player) .floor {
     background: var(--player-color-dark);
   }
 
-  td:has(#player) .spot > i { opacity: 1; }
+  td:has(#player) .spot > .material-symbols-outlined { opacity: 1; }
 
   /* iso spot */
-  .iso .spot > i {
+  .iso .spot > .material-symbols-outlined {
     opacity: 0;
     transform: rotate(-45deg);
     transition: var(--iso-animation-time);
@@ -254,7 +254,7 @@ td:has(#player) .floor {
   }
 
   @media (min-width: 490px) {
-    .iso .spot i {
+    .iso .spot .material-symbols-outlined {
       font-size: 1.5em;
     }
   }

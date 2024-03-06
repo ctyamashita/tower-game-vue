@@ -1,0 +1,74 @@
+body:has(.night) {
+  background: radial-gradient(purple, black 80%);
+  transition: 3s;
+}
+
+body:has(.sunrise) {
+  background: radial-gradient(orange, purple 80%);
+  transition: 3s;
+}
+
+body:has(.sunset) {
+  background: radial-gradient(purple, darkorange 90%);
+  transition: 3s;
+}
+
+.night #board {
+  filter: hue-rotate(18deg) saturate(0.5);
+}
+
+.night .floor,
+.night .box:not(.high) {
+  filter: brightness(.2);
+}
+
+.night .box.high {
+  filter: hue-rotate(-45deg) saturate(2);
+}
+
+.night .floor {
+  background: lightgreen !important;
+}
+
+.night .tree,
+.night .spot {
+  opacity: 0;
+}
+
+.night #player {
+  box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen, 0 0 .5em 0 white;
+}
+
+.night td:has(#player) .tree,
+.night td:has(#player) .spot {
+  opacity: 1;
+}
+
+.night td:has(#player) .tree .top-tree,
+.night td:has(#player) .tree .trunk-tree,
+.night td:has(#player) .tent {
+  opacity: 1;
+  filter: brightness(.1);
+}
+
+.night #menu {
+  filter: invert(1);
+}
+
+
+
+.sunset .floor,
+.sunset .box:not(.high),
+.sunset .top-tree,
+.sunset .trunk-tree {
+  filter: brightness(.7) hue-rotate(60deg);
+}
+
+
+
+.sunrise .floor,
+.sunrise .box:not(.high),
+.sunrise .top-tree,
+.sunrise .trunk-tree {
+  filter: brightness(1) hue-rotate(-45deg);
+}

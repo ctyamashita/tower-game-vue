@@ -1,6 +1,7 @@
 table#board {
   border-spacing: 0;
   transition: var(--iso-animation-time);
+  filter: drop-shadow(0 0 .4em cadetblue);
 }
 
 table#board td {
