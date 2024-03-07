@@ -34,7 +34,7 @@
           </table>
         </div>
       </div>
-      <p class="floor-display"><small>floor.</small><span>{{floor}}</span></p>
+      <p class="floor-display"><small>floor.</small><span>{{floor}}</span> - movements. {{time.movementCount}}</p>
       <div id="board-container">
         <table id="board" :class="board.isoView ? 'iso' : ''">
           <tr v-for="y in board.height">

@@ -45,6 +45,24 @@
   100% { transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-50%); box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen, 0 0 .5em 0 white;  opacity: 1;}
 }
 
+/* Lighting animation */
+@keyframes day {
+  0% {background: rebeccapurple}
+  100% {background: lightskyblue}
+}
+@keyframes night {
+  0% {background: slateblue}
+  100% {background: navy}
+}
+@keyframes sunrise {
+  0% {background: navy}
+  100% {background: rebeccapurple}
+}
+@keyframes sunset {
+  0% {background: lightskyblue}
+  100% {background: slateblue}
+}
+
 /* Combat Animations */
 
 @keyframes player-attack-hit {

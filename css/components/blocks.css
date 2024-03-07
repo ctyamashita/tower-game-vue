@@ -99,7 +99,10 @@ td:has(#player) .floor {
 /* box end */
 
 /* walls */
-.box-walls, .floor-walls, .water-walls, .key-walls {
+.box .walls,
+.floor .walls,
+.water .walls,
+.key-walls {
   position: absolute;
   top: 74%;
   left: 50%;
@@ -131,8 +134,8 @@ td:has(#player) .floor {
   background-color: var(--gray);
 }
 
-.floor-walls .r-wall, .floor-walls .l-wall,
-.water-walls .l-wall, .water-walls .r-wall {
+.floor .walls .r-wall, .floor .walls .l-wall,
+.water .walls .l-wall, .water .walls .r-wall {
   outline-color: transparent;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
@@ -154,20 +157,21 @@ td:has(#player) .floor {
 }
 
 /* iso walls */
-  .iso .box-walls {
+  .iso .box .walls {
     height: 100%;
     left: 75%;
     top: 74%;
     transition: var(--iso-animation-time);
   }
 
-  .iso .water-walls .r-wall, .iso .water-walls .l-wall {
+  .iso .water .walls .r-wall,
+  .iso .water .walls .l-wall {
     opacity: 0;
     height: 20%;
   }
 
-  .iso tr td:last-child .water-walls .l-wall,
-  .iso tr:last-child td .water-walls .r-wall {
+  .iso tr td:last-child .water .walls .l-wall,
+  .iso tr:last-child td .water .walls .r-wall {
     opacity: 1;
     background-color: dodgerblue;
     outline: none;
