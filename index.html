@@ -7,7 +7,7 @@
   <script src="https://kit.fontawesome.com/b6f21dd2ae.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/style.css">
-  <title>Vue WASD</title>
+  <title>Tower Game</title>
   <script type="importmap">
     {
       "imports": {
@@ -19,6 +19,7 @@
 <body>
   <div id="app">
     <div :class="time.light" >
+      <canvas id="clock"></canvas>
       <div id="menu">
         <div class="job"><img v-bind:src="'/images/' + player.job + '-icon.png'"><p>[ {{player.job}} ] - <span><small>lvl</small><span class="lvl-number">{{player.lvl}}</span></span></p></div>
         <div class="bar-container">

@@ -52,10 +52,10 @@
 }
 @keyframes night {
   0% {background: slateblue}
-  100% {background: navy}
+  100% {background: midnightblue}
 }
 @keyframes sunrise {
-  0% {background: navy}
+  0% {background: midnightblue}
   100% {background: rebeccapurple}
 }
 @keyframes sunset {
