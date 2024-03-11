@@ -1,4 +1,5 @@
 {
     "files.autoSave": "afterDelay",
-    "editor.fontFamily": "'Fira Code',Menlo, Monaco, 'Courier New', monospace"
+    "editor.fontFamily": "'Fira Code','SourceCodePro+Powerline+FontAwesome+Regular'",
+    "terminal.integrated.fontFamily": "'SourceCodePro+Powerline+Awesome Regular'"
 }
