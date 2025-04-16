@@ -5,3 +5,14 @@
   'GRAD' 0,
   'opsz' 24
 }
+
+.victory-icon {
+  background-color: gold;
+  fill: orange;
+  border-color: orange;
+}
+
+.lose-icon {
+  fill: mediumpurple;
+  border-color: mediumpurple;
+}

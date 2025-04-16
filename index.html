@@ -12,7 +12,8 @@
   <script type="importmap">
     {
       "imports": {
-        "vue": "./modules/vue.esm-browser.prod.js"
+        "vue": "./modules/vue.esm-browser.prod.js",
+        "sweetalert2": "https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/+esm"
       }
     }
   </script>
@@ -22,21 +23,41 @@
     <div :class="time.light" >
       <canvas id="clock"></canvas>
       <div id="menu">
-        <div class="job"><img v-bind:src="'images/' + player.job + '-icon.png'"><p>[ {{player.job}} ] - <span><small>lvl</small><span class="lvl-number">{{player.lvl}}</span></span></p></div>
+        <div class="job"><img v-bind:src="'images/' + player.job + '-icon.png'"><p> {{player.job}} / <span><small>lvl </small><span class="lvl-number">{{player.lvl}}</span></span></p></div>
         <div class="bar-container">
-          <i class="fa-solid fa-heart"></i><span class="bar"><span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span></span>
+          <i class="fa-solid fa-heart"></i>
+          <span class="bar">
+            <span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span>
+            <small>{{player.hp}} / {{player.max_hp}}</small>
+          </span>
         </div>
         <div class="bar-container">
-          <i class="fa-solid fa-book"></i><span class="bar"><span class="bar-fill" :style="`width: ${player.xp}%`"></span></span>
+          <i class="fa-solid fa-book"></i>
+          <span class="bar">
+            <span class="bar-fill" :style="`width: ${player.xp}%`"></span>
+            <small>{{player.xp}} / 100</small>
+          </span>
         </div>
         <div>
           <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`">attributes{{player.points > 0 ? `(${player.points})` : ''}}</button>
           <table class="stats-table">
-            <tr v-for="attr in Object.keys(player.attributes)"><th>{{attr}}</th><td><p>{{player.attributes[attr]}}</p><button class="plus-btn" v-on:click="updateAttribute(attr)"><i class="fa-solid fa-circle-plus"></i></button></td></tr>
+            <tr v-for="attr in Object.keys(player.attributes)">
+              <th>
+                <div>{{attr}}</div>
+              </th>
+              <td>
+                <div>
+                  <p>{{player.attributes[attr]}}</p>
+                  <button class="plus-btn" v-on:click="updateAttribute(attr)">
+                    <i class="fa-solid fa-circle-plus"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
           </table>
         </div>
       </div>
-      <p class="floor-display"><small>floor.</small><span>{{floor}}</span> - movements. {{time.movementCount}}</p>
+      <p class="floor-display"><small>floor </small><span>{{floor}}</span> / <small>steps </small> {{time.movementCount}}</p>
       <div id="board-container">
         <table id="board" :class="board.isoView ? 'iso' : ''">
           <tr v-for="y in board.height">
@@ -56,16 +77,23 @@
         <div class="modal-content-cty">
           <div class="modal-header-cty bg-dark">
             <h4 class="modal-title text-white">Battle!</h4>
-            <button type="button" class="btn-close-white" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+            <!-- <button type="button" class="btn-close-white" aria-label="Close"><i class="fas fa-times-circle"></i></button> -->
           </div>
           <div class="modal-body">
             <p class="turn-count"><small>turn {{turnCount}}</small></p>
             <div class="enemy-container">
               <div id="enemy-stats">
                 <div class="bar-container">
-                  <i class="fa-solid fa-heart"></i><span class="bar"><span class="bar-fill" :style="`width: ${remainingHP(enemy)}%`"></span></span>
+                  <i class="fa-solid fa-heart"></i>
+                  <span class="bar">
+                    <span class="bar-fill" :style="`width: ${remainingHP(enemy)}%`"></span>
+                    <small>{{enemy.hp}} / {{enemy.max_hp}}</small>
+                  </span>
                 </div>
-                <div class="job"><img v-bind:src="'images/' + enemy.job + '-icon.png'"><p>{{enemy.job}}</p></div>
+                <div class="job">
+                  <img v-bind:src="'images/' + enemy.job + '-icon.png'">
+                  <p>{{enemy.job}}</p>
+                </div>
               </div>
               <div id="enemy-model">
                 <p :class="player.turnDamage == 'miss' ? 'miss' : 'damage'">{{player.turnDamage}}</p>
@@ -79,7 +107,11 @@
               </div>
               <div id="player-stats">
                 <div class="bar-container">
-                  <i class="fa-solid fa-heart"></i><span class="bar"><span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span></span>
+                  <i class="fa-solid fa-heart"></i>
+                  <span class="bar">
+                    <span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span>
+                    <small>{{player.hp}} / {{player.max_hp}}</small>
+                  </span>
                 </div>
                 <div class="job"><img v-bind:src="'images/' + player.job + '-icon.png'"><p>{{player.job}}</p></div>
               </div>

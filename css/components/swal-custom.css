@@ -1,0 +1,11 @@
+.swal2-popup {
+  width: fit-content;
+  min-width: 280px;
+  background: whitesmoke;
+  border-radius: 12px;
+}
+
+.swal2-confirm {
+  background-color: mediumseagreen;
+  border-radius: 12px;
+}

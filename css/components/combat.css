@@ -43,10 +43,12 @@
 
 #enemy-stats {
   border-radius: 0 0 8px 0;
+  background-color: salmon;
 }
 
 #player-stats {
   border-radius: 8px 0 0 0;
+  background-color: mediumturquoise;
 }
 
 #player-stats .bar .bar-fill {
@@ -56,6 +58,7 @@
 .job {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
   gap: 8px;
   width: fit-content;
 }
@@ -111,6 +114,8 @@
 
 #enemy-model p, #player-model p {
   position: absolute;
+  font-size: 2rem;
+  font-family: "Jersey 15", sans-serif;
   font-weight: 900;
   top: -15%;
   left: 50%;

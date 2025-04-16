@@ -4,9 +4,13 @@
 }
 
 .bar-container small {
+  position: absolute;
+  left: .25rem;
   margin: 0;
-  width: 2ch;
+  font-size: .7rem;
+  /* width: 2ch; */
   font-weight: 700;
+  color: darkgreen;
 }
 
 .bar-container i {
@@ -15,6 +19,7 @@
 }
 
 .bar {
+  position: relative;
   flex-grow: 1;
   border: solid 2px var(--black);
   position: relative;
@@ -24,7 +29,8 @@
 
 .bar .bar-fill {
   width: 0;
-  background-color: var(--black);
+  background-color: darkseagreen;
+  border-radius: 2px;
   position: absolute;
   top: 0;
   bottom: 0;

@@ -220,8 +220,11 @@ td:has(#player) .floor {
 
   td:has(.spot) #player {
     /* opacity: 0; */
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4);
+  }
+
+  td:has(.tree):has(.tent) #player {
     background: radial-gradient(yellow 20%, yellowgreen 50%, green 80%);
-    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(30%);
   }
 
   td:has(#player) .spot {
@@ -232,7 +235,7 @@ td:has(#player) .floor {
     z-index: 1;
   }
 
-  td:has(.high.box, .tree) #player {
+  td:has(.high.box) #player {
     background: var(--player-color-dark);
   }
 
@@ -253,7 +256,7 @@ td:has(#player) .floor {
   }
 
   .iso td:has(#player) .spot {
-    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-420%) rotate(-45deg) scale(2);
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-240%) rotate(-45deg) scale(2);
     font-size: .5em;
   }
 
