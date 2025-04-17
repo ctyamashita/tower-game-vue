@@ -6,7 +6,7 @@
 table#board {
   border-spacing: 0;
   transition: var(--iso-animation-time);
-  filter: var(--outline-board)
+  /* filter: var(--outline-board) */
   /* filter: drop-shadow(0 0 .4em cadetblue); */
 }
 

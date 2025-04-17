@@ -79,7 +79,7 @@ td:has(#player) .floor {
     outline-color: darkgray; */
     position: absolute;
     top: 0;
-    filter: var(--outline-high-box);
+    /* filter: var(--outline-high-box); */
   }
 
   .iso .high.box {
@@ -119,6 +119,11 @@ td:has(#player) .floor {
 
 .key-walls {
   width: 100%;
+}
+
+.key-walls .r-wall,
+.key-walls .l-wall {
+  border-radius: calc(var(--border-radius)/2);
 }
 
 .r-wall, .l-wall {

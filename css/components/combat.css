@@ -33,7 +33,7 @@
   animation: enter-combat 2s ease forwards;
 }
 
-#enemy-model img, #player-model img { height: 30vh; }
+#enemy-model img, #player-model img { height: min(50vw, 30vh); }
 
 #enemy-stats, #player-stats {
   padding: 1em 1em 0.5em 1em;
@@ -119,16 +119,19 @@
 
 #enemy-model p, #player-model p {
   position: absolute;
+  color: white;
   font-size: 2rem;
   font-family: "Jersey 15", sans-serif;
   font-weight: 900;
   top: -15%;
   left: 50%;
+  text-shadow: var(--text-outline);
   transition: calc(var(--turn-animation-time)/3) ease-in-out;
 }
 
 #enemy-model p.damage, #player-model p.damage {
   color: crimson;
+  text-shadow: var(--text-outline-white);
 }
 
 #enemy-model p:empty, #player-model p:empty {

@@ -103,6 +103,7 @@
 #menu .stats-table td div {
   padding-right: 8px;
   display: flex;
+  align-items: center;
   justify-content: end;
   gap: 8px;
 }
@@ -116,7 +117,8 @@
   display: none;
 }
 
-#menu .expand .stats-table {
+#menu .expand .stats-table,
+#menu:has(.points-available) .stats-table {
   display: table;
 }
 
@@ -124,10 +126,16 @@
   padding: 0;
   margin: 0;
   border: none;
-  color: tomato;
+  color: gray;
   background: transparent;
   cursor: pointer;
   display: none;
+}
+
+#menu .plus-btn:hover i {
+  color: tomato;
+  scale: 1.2;
+  transition: .3s;
 }
 
 #menu .plus-btn:disabled {

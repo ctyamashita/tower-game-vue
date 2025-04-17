@@ -62,6 +62,35 @@
                   -2px 0 var(--black),
                   -2px 1px var(--black),
                   -2px 2px var(--black);
+  --text-outline-white: 
+                  1px -2px white,
+                  1px -1px white,
+                  1px 0 white,
+                  1px 1px white, 
+                  1px 2px white,
+
+                  2px 2px white, 
+                  2px 1px white, 
+                  2px 0 white,
+                  2px -1px white,
+                  2px -2px white,
+
+                  0 -2px white,
+                  0 -1px white,
+                  0 1px white,
+                  0 2px white,
+
+                  -1px -2px white,
+                  -1px -1px white,
+                  -1px 0 white,
+                  -1px 1px white,
+                  -1px 2px white,
+
+                  -2px -2px white,
+                  -2px -1px white,
+                  -2px 0 white,
+                  -2px 1px white,
+                  -2px 2px white;
   --outline-board:  drop-shadow(-1px -1px 0 white) 
               drop-shadow(1px 1px 0 white) 
               drop-shadow(1px -1px 0 white) 
