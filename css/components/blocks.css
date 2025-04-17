@@ -196,7 +196,9 @@ td:has(#player) .floor {
 
 /* spot */
   .spot {
-    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40%;
     width: 40%;
     top: 30%;
@@ -214,7 +216,7 @@ td:has(#player) .floor {
 
   .spot i {
     color: brown;
-    font-size: 1.2rem;
+    font-size: min(3vw, 1.2rem);
   }
 
   td:has(.spot) .floor {

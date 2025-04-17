@@ -45,6 +45,7 @@
 }
 
 .tree .top-tree .fruit {
+  font-size: min(3vw, 1rem);
   height: 25%;
   width: 25%;
   color: firebrick;
