@@ -32,7 +32,44 @@
   --player-color: radial-gradient(rgba(211, 211, 211, .7) 20%, rgba(169, 169, 169, .7) 58%, rgba(255, 255, 255, .7));
   --player-color-dark: radial-gradient(rgba(169, 169, 169, .7) 20%, rgba(105, 105, 105, .7) 58%, rgba(211, 211, 211, .7));
   --turn-animation-time: 1s;
-  --spacing: .8em
+  --spacing: .8em;
+  --text-outline: 
+                  1px -2px var(--black),
+                  1px -1px var(--black),
+                  1px 0 var(--black),
+                  1px 1px var(--black), 
+                  1px 2px var(--black),
+
+                  2px 2px var(--black), 
+                  2px 1px var(--black), 
+                  2px 0 var(--black),
+                  2px -1px var(--black),
+                  2px -2px var(--black),
+
+                  0 -2px var(--black),
+                  0 -1px var(--black),
+                  0 1px var(--black),
+                  0 2px var(--black),
+
+                  -1px -2px var(--black),
+                  -1px -1px var(--black),
+                  -1px 0 var(--black),
+                  -1px 1px var(--black),
+                  -1px 2px var(--black),
+
+                  -2px -2px var(--black),
+                  -2px -1px var(--black),
+                  -2px 0 var(--black),
+                  -2px 1px var(--black),
+                  -2px 2px var(--black);
+  --outline-board:  drop-shadow(-1px -1px 0 white) 
+              drop-shadow(1px 1px 0 white) 
+              drop-shadow(1px -1px 0 white) 
+              drop-shadow(-1px 1px 0 white);
+  --outline-high-box: drop-shadow(-1px -1px 0 gold) 
+                      drop-shadow(1px 1px 0 gold) 
+                      drop-shadow(1px -1px 0 gold) 
+                      drop-shadow(-1px 1px 0 gold);
 }
 
 * {
@@ -43,11 +80,13 @@
 body {
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-content: center;
   background: radial-gradient(lightblue, teal 70%);
-  height: 100vh;
   overflow: hidden;
 }
 

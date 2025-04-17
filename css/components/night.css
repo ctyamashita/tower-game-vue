@@ -54,7 +54,7 @@ body:has(.sunset) {
 }
 
 .night #menu {
-  filter: invert(1);
+  filter: invert(0);
 }
 
 .sunset .floor,

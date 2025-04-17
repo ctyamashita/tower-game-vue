@@ -4,7 +4,7 @@
   top: 0;
   outline: solid var(--outline) rgba(255, 255, 255, .3);
   outline-offset: calc(var(--outline) / -2);
-  box-shadow: 0 0 0 0 var(--shadow-color);
+  box-shadow: 0 0 0 0 lightgreen;
   transition: var(--iso-animation-time);
   background-color: lightgreen;
 }
@@ -14,6 +14,7 @@ td:has(#player) .floor {
 }
 /* iso floor */
   .iso .floor {
+    box-shadow: 1px 1px 0 1px lightgreen;
     /* box-shadow: 2px 0px 0 0 var(--white); */
     transition: var(--iso-animation-time);
     border-radius: var(--border-radius)
@@ -47,11 +48,12 @@ td:has(#player) .floor {
   height: 100%;
   background-color: var(--white) !important;
   transition: var(--iso-animation-time);
+  box-shadow: 0 0 0 0 var(--white);
 }
 
 .box, .box .r-wall,.box .l-wall {
-  outline: solid var(--outline) var(--white);
-  outline-offset: calc(var(--outline)/-2);
+  /* outline: solid var(--outline) var(--white);
+  outline-offset: calc(var(--outline)/-2); */
   border-radius: var(--border-radius);
 }
 
@@ -64,7 +66,7 @@ td:has(#player) .floor {
 /* iso box */
   .iso .box {
     transform: translate(-73%, -73%);
-    box-shadow: .1em .1em 0 .1em var(--white);
+    box-shadow: 1px 1px 0 1px var(--white);
   }
 /* iso box end */
 
@@ -72,14 +74,16 @@ td:has(#player) .floor {
   .high.box {
     background-color: gold !important;
     outline-color: gold;
+    box-shadow: 0 0 0 0 gold;
     /* background-color: darkgray !important;
     outline-color: darkgray; */
     position: absolute;
     top: 0;
+    filter: var(--outline-high-box);
   }
 
   .iso .high.box {
-    box-shadow: .1em .1em 0 .1em gold;
+    box-shadow: 1px 1px 0 1px gold;
     /* box-shadow: .1em .1em 0 .1em darkgray; */
     transform: translate(-146%, -146%);
   }
@@ -134,7 +138,11 @@ td:has(#player) .floor {
   background-color: var(--gray);
 }
 
-.floor .walls .r-wall, .floor .walls .l-wall,
+.floor .walls .r-wall, .floor .walls .l-wall {
+  border-radius: var(--border-radius);
+  outline-color: transparent;
+}
+
 .water .walls .l-wall, .water .walls .r-wall {
   outline-color: transparent;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
@@ -188,6 +196,7 @@ td:has(#player) .floor {
 
 /* spot */
   .spot {
+    align-content: center;
     height: 40%;
     width: 40%;
     top: 30%;
@@ -203,15 +212,9 @@ td:has(#player) .floor {
     color: var(--black);
   }
 
-  .spot > .material-symbols-outlined {
-    font-size: .8em;
-    opacity: 0;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    transition: var(--iso-animation-time);
+  .spot i {
+    color: brown;
+    font-size: 1.2rem;
   }
 
   td:has(.spot) .floor {

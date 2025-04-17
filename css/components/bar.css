@@ -6,15 +6,21 @@
 .bar-container small {
   position: absolute;
   left: .25rem;
+  bottom: 5px;
   margin: 0;
-  font-size: .7rem;
+  font-size: 1rem;
   /* width: 2ch; */
   font-weight: 700;
   color: darkgreen;
 }
 
+.bar small {
+  color: white;
+  text-shadow: var(--text-outline);
+}
+
 .bar-container i {
-  color: var(--black);
+  color: brown;
   width: 1.5ch;
 }
 

@@ -8,7 +8,7 @@
   z-index: 999;
   box-shadow: inset 0 0 0 4px var(--black);
   display: grid;
-  gap: 8px;
+  gap: 12px;
 }
 
 #menu .bar-fill {
@@ -34,6 +34,11 @@
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 700;
+}
+
+#menu .stats-title:hover {
+  box-shadow: inset 0 0 0 2px;
+  cursor: pointer;
 }
 
 #menu .stats-title.points-available {

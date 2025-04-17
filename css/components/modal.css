@@ -19,6 +19,9 @@
   justify-content: space-between;
   flex-direction: column;
   position: relative;
+  background: linear-gradient(0deg, darkseagreen 0%, lightseagreen 20%, lightseagreen 30%, peachpuff 50%, sandybrown 60%, skyblue 60%, deepskyblue, mediumslateblue);
+  filter: brightness(0);
+  animation: combat-intro 1s forwards .3s;
 }
 
 .modal.expand {

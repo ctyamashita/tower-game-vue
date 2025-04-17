@@ -44,6 +44,22 @@
   transition: var(--iso-animation-time);
 }
 
+.tree .top-tree .fruit {
+  height: 25%;
+  width: 25%;
+  color: firebrick;
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  border-radius: 3rem;
+  transition: .3s;
+}
+
+.iso .tree .top-tree .fruit {
+  text-shadow: 0px 2px maroon;
+  transform: skew(15deg) rotate(-40deg);
+}
+
 td:has(.tree):has(#player) .floor,
 td:has(.tree) .floor {
   background: radial-gradient(var(--shadow-color) 40%, lightgreen 60%);
@@ -74,7 +90,7 @@ td:has(.tree) #player {
   transition: var(--iso-animation-time);
 }
 
-.iso .tree i {
+.iso .tree i:not(.fruit) {
   position: absolute;
   z-index: 2;
   top: 0%;
@@ -86,13 +102,13 @@ td:has(.tree) #player {
   background-color: crimson;
   color: white;
   opacity: 0;
-  transition: .3s;
+  transition: tranform .3s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.iso td:has(#player) .tree i {
+.iso td:has(#player) .tree i:not(.fruit) {
   transform: translate(-200%, -200%) rotate(-45deg) scaleY(1.5);
   animation: heart-show 1s forwards;
 }

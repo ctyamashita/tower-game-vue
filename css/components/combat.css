@@ -30,6 +30,7 @@
 
 #enemy-model, #player-model {
   margin: auto;
+  animation: enter-combat 2s ease forwards;
 }
 
 #enemy-model img, #player-model img { height: 30vh; }
@@ -44,11 +45,15 @@
 #enemy-stats {
   border-radius: 0 0 8px 0;
   background-color: salmon;
+  border-right: solid 2px brown;
+  border-bottom: solid 2px brown;
 }
 
 #player-stats {
   border-radius: 8px 0 0 0;
   background-color: mediumturquoise;
+  border-left: solid 2px darkcyan;
+  border-top: solid 2px darkcyan;
 }
 
 #player-stats .bar .bar-fill {

@@ -9,6 +9,11 @@
   100% {opacity: 1; transform: translateY(0)}
 }
 
+@keyframes combat-intro {
+  0% {filter: brightness(0)}
+  100% {filter: brightness(1)}
+}
+
 /* Board Animations */
 
 @keyframes show-blocks {
@@ -64,6 +69,11 @@
 }
 
 /* Combat Animations */
+
+@keyframes enter-combat {
+  0% { transform: translate(-1000px);}
+  100% { transform: translate(0px); }
+}
 
 @keyframes player-attack-hit {
   0%   { transform: translateX(0px); }
