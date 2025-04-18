@@ -37,9 +37,9 @@
 
 #enemy-stats, #player-stats {
   padding: 1em 1em 0.5em 1em;
-  background-color: #00e1c2;
   height: fit-content;
   width: 70%;
+  outline: solid 2px var(--black);
 }
 
 #enemy-stats {
@@ -142,4 +142,14 @@
 
 #player-model p {
   transition-delay: calc(var(--turn-animation-time)/2);
+}
+
+.modal-footer-cty button {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  padding: .5rem .75rem;
+}
+.modal-footer-cty button:hover {
+  box-shadow: inset 0 0 0 2px var(--black), 0 0 0 2px white;
 }
