@@ -13,13 +13,14 @@
 }
 
 .modal-body {
-  flex-grow: 1;
-  height: 75vh;
+  /* flex-grow: 1; */
+  min-height: 70vh;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  background: linear-gradient(0deg, darkseagreen 0%, lightseagreen 20%, lightseagreen 30%, peachpuff 50%, peachpuff 57%, sandybrown 64%, sandybrown 64.7%, brown 64.7%, brown 65%, skyblue 60%, deepskyblue, mediumslateblue);
+  background: linear-gradient(0deg, darkseagreen 0%, lightseagreen 20%, lightseagreen 30%, peachpuff 50%, peachpuff 57%, sandybrown 64%, sandybrown 64.7%, brown 64.7%, brown 65.2%, skyblue 60%, deepskyblue, mediumslateblue);
   filter: brightness(0);
   animation: combat-intro 1s forwards .3s;
 }
@@ -53,6 +54,7 @@ body:has(.modal.expand) .bg {
 
 .modal-content-cty {
   position: relative;
+  margin: auto;
   display: flex;
   width: 100%;
   max-width: 600px;
@@ -132,7 +134,7 @@ body:has(.modal.expand) .bg {
   }
 
   .modal-content-cty {
-    margin: 2.5% 0 5% 0;
+    /* margin: 2.5% 0 5% 0; */
   }
 
   .modal.expand {

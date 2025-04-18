@@ -1,6 +1,9 @@
 .bar-container {
   display: flex;
   gap: 8px;
+  background: white;
+  padding: 2px 2px 2px 8px;
+  border-radius: 6px;
 }
 
 .bar-container small {
@@ -35,11 +38,11 @@
 
 .bar .bar-fill {
   width: 0;
-  background-color: darkseagreen;
+  background: darkseagreen;
   border-radius: 2px;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  transition: .3s;
+  transition: width .3s, background 0s;
 }

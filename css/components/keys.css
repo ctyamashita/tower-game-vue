@@ -2,7 +2,7 @@
 
 
 #keys-display {
-  z-index: 999;
+  z-index: 998;
   box-shadow: 0 0 0 0.5em rgba(0, 0, 0, .3);
   background-color: rgba(0, 0, 0, .3);
   border-radius: calc(var(--border-radius)/2);

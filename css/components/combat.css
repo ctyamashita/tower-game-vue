@@ -1,9 +1,9 @@
 .turn-count {
   position: absolute;
-  top: 0;
-  right: 1em;
+  bottom: 75px;
+  right: 8px;
   background: white;
-  padding: 8px 16px;
+  padding: 4px 12px 8px;
   border-radius: 50px;
 }
 
@@ -39,26 +39,28 @@
   padding: 1em 1em 0.5em 1em;
   height: fit-content;
   width: 70%;
-  outline: solid 2px var(--black);
 }
 
 #enemy-stats {
   border-radius: 0 0 8px 0;
   background-color: salmon;
-  border-right: solid 2px brown;
-  border-bottom: solid 2px brown;
+  box-shadow: 1px 1px 0 1px brown, 2px 2px 0 2px var(--black);
 }
 
 #player-stats {
   border-radius: 8px 0 0 0;
   background-color: mediumturquoise;
-  border-left: solid 2px darkcyan;
-  border-top: solid 2px darkcyan;
+  box-shadow: -1px -1px 0 1px darkcyan, -2px -2px 0 2px var(--black);
 }
 
-#player-stats .bar .bar-fill {
-  transition-delay: .5s;
+.enemy-container:has(.damage:not(:empty)) #enemy-stats .bar-container .bar .bar-fill {
+  animation: bar-down .5s forwards;
 }
+
+.player-container:has(.damage:not(:empty)) #player-stats .bar-container .bar .bar-fill {
+  animation: bar-down .5s forwards .5s;
+}
+
 
 .job {
   display: flex;
@@ -97,13 +99,30 @@
   animation-duration: calc(var(--turn-animation-time)/2);
 }
 
+/* Attack */
+/* Player takes damage and Attack enemy */
 #player-model .atk-hit { animation-name: player-attack-hit; }
 
+/* Enemy takes damage and Attack player */
 #enemy-model .atk-hit { animation-name: enemy-attack-hit; }
 
+/* Player avoid the attack and Attack enemy */
 #player-model .atk-miss { animation-name: player-attack-miss; }
 
+/* Enemy avoid the attack and Attack player */
 #enemy-model .atk-miss { animation-name: enemy-attack-miss; }
+
+/* Critical */
+#player-model .atk-hit.critical { animation-name: player-attack-hit-critical; }
+
+#enemy-model .atk-hit.critical { animation-name: enemy-attack-hit-critical; }
+
+#player-model .atk-miss.critical { animation-name: player-attack-miss-critical; }
+
+#enemy-model .atk-miss.critical { animation-name: enemy-attack-miss-critical; }
+
+/* run */
+#player-model .run { animation-name: player-run;}
 
 .player-atk { animation-name: player-attack; }
 
@@ -144,6 +163,7 @@
   transition-delay: calc(var(--turn-animation-time)/2);
 }
 
+/* combat menu */
 .modal-footer-cty button {
   font-size: 1.2rem;
   border: none;
