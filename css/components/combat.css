@@ -117,12 +117,14 @@
 
 #enemy-model .atk-hit.critical { animation-name: enemy-attack-hit-critical; }
 
-#player-model .atk-miss.critical { animation-name: player-attack-miss-critical; }
+/* #player-model .atk-miss.critical { animation-name: player-attack-miss-critical; }
 
-#enemy-model .atk-miss.critical { animation-name: enemy-attack-miss-critical; }
+#enemy-model .atk-miss.critical { animation-name: enemy-attack-miss-critical; } */
 
 /* run */
-#player-model .run { animation-name: player-run;}
+#player-model .run { 
+  animation: player-run 2s forwards;
+}
 
 .player-atk { animation-name: player-attack; }
 

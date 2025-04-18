@@ -3,6 +3,7 @@
   min-width: 280px;
   background: whitesmoke;
   border-radius: 12px;
+  box-shadow: inset 0 0 0 3px whitesmoke, inset 0 0 0 6px;
 }
 
 .swal2-confirm {
