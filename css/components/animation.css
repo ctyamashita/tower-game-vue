@@ -170,6 +170,22 @@
   100% { transform: translateX(-1000px); }
 }
 
+@keyframes player-failed-run-dmg {
+  0%   { transform: translateX(0px); }
+  60%  { opacity: 1; filter: invert(0%); }
+  70%  { opacity: 0; transform: translateX(0px); }
+  80%  { opacity: 1; transform: translateX(-10px); filter: invert(70%);}
+  90%  { opacity: 0; }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+@keyframes enemy-attack-failed-run {
+  0%   { transform: translateX(0px); }
+  60%  { transform: translateX(-20px); }
+  90%  { transform: translateX(40px); }
+  100% { transform: translateX(0px); }
+}
+
 /* enemy taking the attack */
 @keyframes enemy-hit {
   0%   { transform: translateX(0px); }

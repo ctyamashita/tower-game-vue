@@ -126,6 +126,14 @@
   animation: player-run 2s forwards;
 }
 
+#player-model .run-failed {
+  animation: player-failed-run-dmg calc(var(--turn-animation-time)/2);
+}
+
+#enemy-model .run-failed {
+  animation: enemy-attack-failed-run calc(var(--turn-animation-time)/2);
+}
+
 .player-atk { animation-name: player-attack; }
 
 .enemy-hit { animation-name: enemy-hit; }

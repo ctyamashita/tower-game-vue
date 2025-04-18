@@ -95,13 +95,13 @@
                 </div>
               </div>
               <div id="enemy-model">
-                <p :class="player.turnDamage == 'miss' ? 'miss' : 'damage'">{{player.turnDamage}}</p>
+                <p :class="player.turnDamage == 'miss' ? 'miss' : 'damage'">{{isNaN(player.turnDamage) ? '' : player.turnDamage}}</p>
                 <img v-bind:src="'images/' + enemy.job + '.png'">
               </div>
             </div>
             <div class="player-container">
               <div id="player-model">
-                <p :class="enemy.turnDamage == 'miss' ? 'miss' : 'damage'">{{enemy.turnDamage}}</p>
+                <p :class="enemy.turnDamage == 'miss' ? 'miss' : 'damage'">{{isNaN(enemy.turnDamage) && enemy.turnDamage != 'miss' ? '' : enemy.turnDamage}}</p>
                 <img v-bind:src="'images/' + player.job + '.png'">
               </div>
               <div id="player-stats">
@@ -117,8 +117,8 @@
             </div>
           </div>
           <div class="modal-footer-cty bg-dark">
-            <button id="atk-btn" v-on:click="combatTurn()">Attack</button>
-            <button>Run</button>
+            <button id="atk-btn" v-on:click="combatTurn('attack')">Attack</button>
+            <button id="run-btn" v-on:click="combatTurn('run')">Run</button>
           </div>
         </div>
       </div>
