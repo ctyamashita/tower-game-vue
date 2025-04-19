@@ -1,0 +1,172 @@
+[{
+  "id": 1,
+  "job": "warrior",
+  "hp": 12,
+  "max_hp": 12,
+  "isDead": false,
+  "attributes": {
+    "atk": 3,
+    "def": 3,
+    "agi": 3,
+    "dex": 3,
+    "mag": 3,
+    "luk": 3
+  },
+  "actions": [
+    "attack",
+    "charged attack"
+  ]
+},
+{
+  "id": 2,
+  "job": "ranger",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 2,
+    "def": 2,
+    "agi": 4,
+    "dex": 4,
+    "mag": 3,
+    "luk": 3
+  },
+  "actions": [
+    "attack",
+    "piercing shot"
+  ]
+},
+{
+  "id": 3,
+  "job": "ninja",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 2,
+    "def": 1,
+    "agi": 5,
+    "dex": 3,
+    "mag": 3,
+    "luk": 4
+  },
+  "actions": [
+    "attack",
+    "backstab"
+  ]
+},
+{
+  "id": 4,
+  "job": "monk",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 3,
+    "def": 4,
+    "agi": 2,
+    "dex": 2,
+    "mag": 4,
+    "luk": 3
+  },
+  "actions": [
+    "attack",
+    "counter"
+  ]
+},
+{
+  "id": 5,
+  "job": "necromancer",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 3,
+    "def": 5,
+    "agi": 1,
+    "dex": 3,
+    "mag": 5,
+    "luk": 1
+  },
+  "actions": [
+    "attack",
+    "bone shield"
+  ]
+},
+{
+  "id": 6,
+  "job": "beastmaster",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 4,
+    "def": 2,
+    "agi": 4,
+    "dex": 3,
+    "mag": 2,
+    "luk": 3
+  },
+  "actions": [
+    "attack",
+    "double attack"
+  ]
+},
+{
+  "id": 7,
+  "job": "cleric",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 2,
+    "def": 4,
+    "agi": 2,
+    "dex": 3,
+    "mag": 4,
+    "luk": 3
+  },
+  "actions": [
+    "attack",
+    "heal"
+  ]
+},
+{
+  "id": 8,
+  "job": "mage",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 1,
+    "def": 1,
+    "agi": 3,
+    "dex": 5,
+    "mag": 5,
+    "luk": 3
+  },
+  "actions": [
+    "attack",
+    "fire ball"
+  ]
+},
+{
+  "id": 8,
+  "job": "bard",
+  "hp": 9,
+  "max_hp": 9,
+  "isDead": false,
+  "attributes": {
+    "atk": 2,
+    "def": 2,
+    "agi": 3,
+    "dex": 3,
+    "mag": 4,
+    "luk": 4
+  },
+  "actions": [
+    "attack",
+    "stat up"
+  ]
+}
+]
