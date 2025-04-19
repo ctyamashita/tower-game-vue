@@ -12,7 +12,7 @@
     {
       "imports": {
         "vue": "./modules/vue.esm-browser.prod.js",
-        "sweetalert2": "https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/+esm"
+        "sweetalert2": "./modules/sweetalert2.esm.all.js"
       }
     }
   </script>
@@ -95,7 +95,7 @@
                 </div>
               </div>
               <div id="enemy-model">
-                <p :class="player.turnDamage == 'miss' ? 'miss' : 'damage'">{{isNaN(player.turnDamage) ? '' : player.turnDamage}}</p>
+                <p :class="player.turnDamage == 'miss' ? 'miss' : 'damage'">{{isNaN(player.turnDamage) && player.turnDamage != 'miss' ? '' : player.turnDamage}}</p>
                 <img v-bind:src="'images/' + enemy.job + '.png'">
               </div>
             </div>
