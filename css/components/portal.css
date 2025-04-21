@@ -7,7 +7,7 @@ td:has(.portal) #player {
 }
 
 .iso td:has(.portal) #player {
-  animation: 3s ascend 1s forwards;
+  animation: 2s ascend 1s forwards;
 }
 
 td:has(.portal) {

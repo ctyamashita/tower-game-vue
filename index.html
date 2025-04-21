@@ -56,7 +56,12 @@
           </table>
         </div>
       </div>
-      <p class="floor-display"><small>floor </small><span>{{floor}}</span> / <small>steps </small> {{time.movementCount}}</p>
+      <div class="floor-display-container">
+        <p class="floor-display"><small>floor </small><span>{{floor}}</span> / <small>steps </small> {{time.movementCount}}</p>
+        <button v-on:click="enableAudio" class="audio-btn">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+      </div>
       <div id="board-container">
         <table id="board" :class="board.isoView ? 'iso' : ''">
           <tr v-for="y in board.height">

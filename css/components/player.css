@@ -7,7 +7,7 @@
 
 .iso #player.spawn {
   opacity: 0;
-  animation: 3s land 1s forwards;
+  animation: 2s land 1s forwards;
 }
 
 .night .iso #player.spawn {

@@ -138,6 +138,8 @@
 
 .enemy-hit { animation-name: enemy-hit; }
 
+#enemy-model .enemy-hit.critical { animation-name: enemy-hit-critical; }
+
 #enemy-model p {
   transform: scaleX(-1);
 }

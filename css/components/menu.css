@@ -142,14 +142,33 @@
   display: none;
 }
 
-.floor-display {
+.floor-display-container {
   position: absolute;
   top: 1em;
   right: 1em;
   margin: 0;
   font-size: 1.5em;
   background: var(--black);
-  padding: 0.25em 0.75em;
+  padding: 0.25em 0.25em .25em .75em;
   color: white;
   border-radius: 50px;
+  display: flex;
+  gap: 1rem;
+}
+
+.floor-display-container p {
+  margin: auto;
+}
+
+.audio-btn {
+  border: none;
+  border-radius: 40px;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.audio-btn:has(.fa-volume-xmark) {
+  background-color: grey;
+  color: white;
 }
