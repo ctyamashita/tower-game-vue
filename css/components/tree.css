@@ -13,9 +13,9 @@
 .iso .trunk-tree {
   transform: rotate(-45deg) translateX(-40%);
   width: 15% !important;
-  height: 100% !important;
-  top: -30%;
-  right: 65%;
+  height: 50% !important;
+  top: 12.5%;
+  right: 45%;
   transition: var(--iso-animation-time);
 }
 
@@ -70,7 +70,15 @@ td:has(.tree) .floor {
 td:has(#player) .tree {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td:has(#player) .top-tree,
+td:has(#player) .trunk-tree {
   opacity: .5;
+
 }
 
 .iso td:has(#player) .tree {
@@ -91,25 +99,30 @@ td:has(.tree) #player {
   transition: var(--iso-animation-time);
 }
 
-.iso .tree i:not(.fruit) {
-  position: absolute;
+.tree i:not(.fruit) {
+  align-content: center;
   z-index: 2;
-  top: 0%;
-  left: 0%;
-  transform: rotate(-45deg) scaleY(1.5);
   width: 30px;
   height: 30px;
   border-radius: 50px;
   background-color: crimson;
   color: white;
   opacity: 0;
-  transition: tranform .3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: transform .3s;
+}
+
+.iso .tree i:not(.fruit) {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: rotate(-45deg) scaleY(1.5);
 }
 
 .iso td:has(#player) .tree i:not(.fruit) {
   transform: translate(-200%, -200%) rotate(-45deg) scaleY(1.5);
+  animation: heart-show-iso 1s forwards;
+}
+
+td:has(#player) .tree i:not(.fruit) {
   animation: heart-show 1s forwards;
 }

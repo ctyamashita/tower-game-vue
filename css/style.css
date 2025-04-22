@@ -22,7 +22,7 @@
 :root {
   --border-radius: .2em;
   --iso-animation-time: .8s;
-  --outline: .1em;
+  --outline: 2px;
   --shadow-color: rgb(141,189,107);
   --white: floralwhite;
   --lightgray: antiquewhite;
@@ -33,8 +33,7 @@
   --player-color-dark: radial-gradient(rgba(169, 169, 169, .7) 20%, rgba(105, 105, 105, .7) 58%, rgba(211, 211, 211, .7));
   --turn-animation-time: 1s;
   --spacing: .8em;
-  --text-outline: 
-                  1px -2px var(--black),
+  --text-outline: 1px -2px var(--black),
                   1px -1px var(--black),
                   1px 0 var(--black),
                   1px 1px var(--black), 
@@ -92,13 +91,17 @@
                   -2px 1px white,
                   -2px 2px white;
   --outline-board:  drop-shadow(-1px -1px 0 white) 
-              drop-shadow(1px 1px 0 white) 
-              drop-shadow(1px -1px 0 white) 
-              drop-shadow(-1px 1px 0 white);
-  --outline-high-box: drop-shadow(-1px -1px 0 gold) 
-                      drop-shadow(1px 1px 0 gold) 
-                      drop-shadow(1px -1px 0 gold) 
-                      drop-shadow(-1px 1px 0 gold);
+                    drop-shadow(1px 1px 0 white) 
+                    drop-shadow(1px -1px 0 white) 
+                    drop-shadow(-1px 1px 0 white);
+  --outline-high-box: drop-shadow(-1px -1px 0 orange) 
+                      drop-shadow(1px 1px 0 orange) 
+                      drop-shadow(1px -1px 0 orange) 
+                      drop-shadow(-1px 1px 0 orange);
+  --outline-box:  drop-shadow(-1px -1px 0 var(--lightgray)) 
+                  drop-shadow(1px 1px 0 var(--lightgray)) 
+                  drop-shadow(1px -1px 0 var(--lightgray)) 
+                  drop-shadow(-1px 1px 0 var(--lightgray));
 }
 
 * {

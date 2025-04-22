@@ -21,9 +21,15 @@
   100% {opacity: 1; transform: translate(0, 0)}
 }
 
-@keyframes heart-show {
+@keyframes heart-show-iso {
   0%   {opacity: 0; transform: translate(0%, 0%) rotate(-45deg) scaleY(1.5)}
   50%  {opacity: 1; transform: translate(-200%, -200%) rotate(-45deg) scaleY(1.5)}
+  100% {opacity: 0;}
+}
+
+@keyframes heart-show {
+  0%   {opacity: 0;}
+  50%  {opacity: 1; transform: scale(1.5)}
   100% {opacity: 0;}
 }
 

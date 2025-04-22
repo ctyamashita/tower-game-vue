@@ -2,8 +2,8 @@
 .floor {
   position: absolute;
   top: 0;
-  outline: solid var(--outline) rgba(255, 255, 255, .3);
-  outline-offset: calc(var(--outline) / -2);
+  outline: solid calc(var(--outline)/2) rgba(120, 200, 120, 0.7);
+  outline-offset: calc(var(--outline) / -4);
   box-shadow: 0 0 0 0 lightgreen;
   transition: var(--iso-animation-time);
   background-color: lightgreen;
@@ -65,8 +65,9 @@ td:has(#player) .floor {
 
 /* iso box */
   .iso .box {
-    transform: translate(-73%, -73%);
+    transform: translate(-72%, -72%) scale(.975);
     box-shadow: 1px 1px 0 1px var(--white);
+    filter: var(--outline-box);
   }
 /* iso box end */
 
@@ -79,13 +80,13 @@ td:has(#player) .floor {
     outline-color: darkgray; */
     position: absolute;
     top: 0;
-    /* filter: var(--outline-high-box); */
+    filter: var(--outline-high-box);
   }
 
   .iso .high.box {
     box-shadow: 1px 1px 0 1px gold;
     /* box-shadow: .1em .1em 0 .1em darkgray; */
-    transform: translate(-146%, -146%);
+    transform: translate(-146%, -146%) scale(.975);
   }
 
   td:has(.high.box) .floor, td:has(#player) .high.box .floor {
@@ -115,6 +116,47 @@ td:has(#player) .floor {
   display: flex;
   transition: var(--iso-animation-time);
   transform: skew(45deg, -45deg);
+}
+
+.iso td {
+  transform: translate(0px, 0px);
+  transition: transform var(--iso-animation-time);
+}
+
+.iso td.low {
+  transform: translate(10px, 10px) !important;
+  transition: transform var(--iso-animation-time);
+}
+
+.iso td.medium {
+  
+}
+
+.iso td.high {
+  transform: translate(-10px, -10px) !important;
+  transition: transform var(--iso-animation-time);
+}
+
+/* .iso .floor.low ~ .box {
+  transform: translate(-60%, -60%) scale(.975);
+}
+
+.iso .floor.low ~ .box.high {
+  transform: translate(-132%, -132%) scale(.975);
+}
+
+.iso .floor.low {
+  transform: translate(10px, 10px);
+} */
+
+.iso td.low .floor .walls {
+  height: 31%;
+  left: 40%;
+}
+
+.iso td.high .floor .walls {
+  height: 65%;
+  left: 57%;
 }
 
 .key-walls {
@@ -172,7 +214,7 @@ td:has(#player) .floor {
 /* iso walls */
   .iso .box .walls {
     height: 100%;
-    left: 75%;
+    left: 74%;
     top: 74%;
     transition: var(--iso-animation-time);
   }

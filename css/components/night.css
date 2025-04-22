@@ -18,13 +18,16 @@ body:has(.sunset) {
   filter: hue-rotate(13deg) saturate(0.5);
 }
 
-.night .floor,
-.night .box:not(.high) {
+.night .floor {
   filter: brightness(.3);
 }
 
+.night .box:not(.high) {
+  filter: var(--outline-box) brightness(.3);
+}
+
 .night .box.high {
-  filter: hue-rotate(-45deg) saturate(2);
+  filter: var(--outline-high-box) hue-rotate(-45deg) saturate(2);
 }
 
 .night .floor {
@@ -57,24 +60,21 @@ body:has(.sunset) {
   filter: invert(0);
 }
 
-.sunset .floor,
-.sunset .box:not(.high),
-.sunrise .floor,
+.sunset .box:not(.high) {
+  filter: var(--outline-box) brightness(1) hue-rotate(-45deg);
+}
+
 .sunrise .box:not(.high) {
-  filter: brightness(.6);
+  filter: var(--outline-box) brightness(.6) hue-rotate(60deg);
 }
 
 .sunset .floor,
-.sunset .box:not(.high),
 .sunset .top-tree,
 .sunset .trunk-tree {
   filter: brightness(1) hue-rotate(-45deg);
 }
 
-
-
 .sunrise .floor,
-.sunrise .box:not(.high),
 .sunrise .top-tree,
 .sunrise .trunk-tree {
   filter: brightness(.6) hue-rotate(60deg);
