@@ -124,7 +124,7 @@ td:has(#player) .floor {
 }
 
 .iso td.low {
-  transform: translate(10px, 10px) !important;
+  transform: translate(15%, 15%) !important;
   transition: transform var(--iso-animation-time);
 }
 
@@ -133,7 +133,7 @@ td:has(#player) .floor {
 }
 
 .iso td.high {
-  transform: translate(-10px, -10px) !important;
+  transform: translate(-15%, -15%) !important;
   transition: transform var(--iso-animation-time);
 }
 
@@ -155,8 +155,8 @@ td:has(#player) .floor {
 }
 
 .iso td.high .floor .walls {
-  height: 65%;
-  left: 57%;
+  height: 72%;
+    left: 61%;
 }
 
 .key-walls {
