@@ -2,6 +2,7 @@
   "name": "Kyuuko Tower Game",
   "display": "standalone",
   "scope": "/",
+  "background_color": "lightskyblue",
   "icons": [
     {
       "src": "images/icons/android-chrome-512x512.png",
