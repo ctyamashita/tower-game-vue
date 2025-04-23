@@ -1,7 +1,7 @@
 {
   "name": "Kyuuko Tower Game",
   "display": "standalone",
-  "scope": "https://ctyamashita.github.io/tower-game-vue/",
+  "scope": "/",
   "icons": [
     {
       "src": "https://ctyamashita.github.io/tower-game-vue/images/icons/android-chrome-512x512.png",
