@@ -64,7 +64,11 @@ self.addEventListener('install', function(e) {
         'css/components/tent.css',
         'css/components/tree.css',
         'data/classes.json',
-        'index.html'
+        'fonts/DotGothic16/DotGothic16-Regular.ttf',
+        'fonts/Jersey_15/Jersey15-Regular.ttf',
+        'fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf',
+        'index.html',
+        'service-worker.js'
       ]).catch(err=>console.log(err))
     })
   )
