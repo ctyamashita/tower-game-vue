@@ -64,11 +64,11 @@ self.addEventListener('install', function(e) {
         'css/components/tent.css',
         'css/components/tree.css',
         'data/classes.json',
-        'fonts/DotGothic16/DotGothic16-Regular.ttf',
-        'fonts/Jersey_15/Jersey15-Regular.ttf',
-        'fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf',
-        'index.html',
+        'css/fonts/DotGothic16/DotGothic16-Regular.ttf',
+        'css/fonts/Jersey_15/Jersey15-Regular.ttf',
+        'css/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf',
         'fontawesome.js',
+        'index.html',
         'service-worker.js'
       ]).catch(err=>console.log(err))
     })
