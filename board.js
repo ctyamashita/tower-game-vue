@@ -1,5 +1,6 @@
 // Rand method
 const rand = (size) => {
+  // random number from 0 to size
   return Math.floor(Math.random() * size);
 }
 
