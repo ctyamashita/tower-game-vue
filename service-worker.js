@@ -68,7 +68,8 @@ self.addEventListener('install', function(e) {
         'fonts/Jersey_15/Jersey15-Regular.ttf',
         'fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf',
         'index.html',
-        'service-worker.js'
+        'service-worker.js',
+        'fontawesome.js'
       ]).catch(err=>console.log(err))
     })
   )
