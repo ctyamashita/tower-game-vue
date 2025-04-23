@@ -69,9 +69,40 @@ self.addEventListener('install', function(e) {
         'css/fonts/Jersey_15/Jersey15-Regular.ttf',
         'css/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf',
         './fontawesome.js',
-        './index.html',
-        './service-worker.js'
+        './index.html'
       ]).catch(err=>console.log(err))
     })
   )
 })
+
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(
+        keyList.map((key) => {
+          if (key === 'kyuuko-tower-arena') {
+            return;
+          }
+          return caches.delete(key);
+        }),
+      );
+    }),
+  );
+});
+
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    (async () => {
+      const r = await caches.match(e.request);
+      console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+      if (r) {
+        return r;
+      }
+      const response = await fetch(e.request);
+      const cache = await caches.open('kyuuko-tower-arena');
+      console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+      cache.put(e.request, response.clone());
+      return response;
+    })(),
+  );
+});
