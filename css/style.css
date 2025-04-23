@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap'); */
 
 
 @import url('components/board.css');
@@ -19,18 +19,18 @@
 @import url('components/night.css');
 @import url('components/swal-custom.css');
 
-/* @font-face {
-  font-family: DotGothic16;
-  src: url("fonts/DotGothic16/DotGothic16-Regular.ttf");
+@font-face {
+  font-family: "DotGothic16";
+  src: url("../fonts/DotGothic16/DotGothic16-Regular.ttf");
 }
 @font-face {
   font-family: "Jersey 15";
-  src: url("fonts/Jersey_15/Jersey15-Regular.ttf");
+  src: url("../fonts/Jersey_15/Jersey15-Regular.ttf");
 }
 @font-face {
   font-family: "ZCOOL QingKe HuangYou";
-  src: url("fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
-} */
+  src: url("../fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
+}
 
 
 :root {
