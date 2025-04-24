@@ -11,6 +11,7 @@ self.addEventListener('install', function(e) {
         'lib/Tile.js',
         'lib/Combat.js',
         'lib/board.js',
+        'lib/font-awesome.js',
         'images/icons/android-chrome-192x192.png',
         'images/icons/android-chrome-512x512.png',
         'images/icons/apple-touch-icon.png',
@@ -68,8 +69,7 @@ self.addEventListener('install', function(e) {
         'css/fonts/DotGothic16/DotGothic16-Regular.ttf',
         'css/fonts/Jersey_15/Jersey15-Regular.ttf',
         'css/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf',
-        './fontawesome.js',
-        './index.html'
+        './index.html',
       ]).catch(err=>console.log(err))
     })
   )

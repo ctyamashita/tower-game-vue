@@ -181,6 +181,7 @@
   border: none;
   border-radius: 8px;
   padding: .5rem .75rem;
+  color: var(--black);
 }
 .modal-footer-cty button:hover {
   box-shadow: inset 0 0 0 2px var(--black), 0 0 0 2px white;
