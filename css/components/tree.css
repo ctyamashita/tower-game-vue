@@ -88,14 +88,14 @@ td:has(#player) .trunk-tree {
 
 td:has(.tree) #player {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 20%;
 }
 
 .iso td:has(.tree) #player {
-  top: 50%;
+  top: 30%;
   right: 20%;
-  transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(5%);
+  transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(5%);
   transition: var(--iso-animation-time);
 }
 

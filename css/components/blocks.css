@@ -272,11 +272,11 @@ td:has(#player) .floor {
 
   td:has(.spot) #player {
     /* opacity: 0; */
-    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4);
+    transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4);
   }
 
   td:has(.tree):has(.tent) #player {
-    background: radial-gradient(yellow 20%, yellowgreen 50%, green 80%);
+    /* background: radial-gradient(yellow 20%, yellowgreen 50%, green 80%); */
   }
 
   td:has(#player) .spot {
@@ -288,7 +288,8 @@ td:has(#player) .floor {
   }
 
   td:has(.high.box) #player {
-    background: var(--player-color-dark);
+    filter: brightness(.7);
+    /* background: var(--player-color-dark); */
   }
 
   td:has(#player) .spot > .material-symbols-outlined { opacity: 1; }

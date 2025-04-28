@@ -37,7 +37,7 @@
   --lightgray: antiquewhite;
   --gray: tan;
   --black: rgb(70, 70, 70);
-  --player-size: 30%;
+  --player-size: 50%;
   --player-color: radial-gradient(rgba(211, 211, 211, .7) 20%, rgba(169, 169, 169, .7) 58%, rgba(255, 255, 255, .7));
   --player-color-dark: radial-gradient(rgba(169, 169, 169, .7) 20%, rgba(105, 105, 105, .7) 58%, rgba(211, 211, 211, .7));
   --turn-animation-time: 1s;
