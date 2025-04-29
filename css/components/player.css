@@ -1,16 +1,24 @@
 .iso #player {
-  transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-25%);
+  transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-15%);
   /* box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen; */
   transition: transform var(--iso-animation-time), box-shadow var(--iso-animation-time);
 }
 
+.iso td:has(#player) .floor {
+  animation: 3s land-shadow 2s forwards;
+}
+
+.iso td.low:has(#player) .floor {
+  animation: 3s land-shadow-low 2s forwards;
+}
+
 .iso #player.spawn {
   opacity: 0;
-  animation: 2s land 1s forwards;
+  animation: 3s land 2s forwards;
 }
 
 .night .iso #player.spawn {
-  animation: 3s land-night 1s forwards;
+  animation: 3s land-night 2s forwards;
 }
 
 #player {
@@ -18,7 +26,7 @@
   height: var(--player-size);
   /* box-shadow: 0 0 0 var(--outline) dimgray, inset 0 0 .5em .2em lightgreen; */
   background-image: url('../../images/player.png');
-  background-size: 85%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;

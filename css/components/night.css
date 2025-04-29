@@ -31,7 +31,11 @@ body:has(.sunset) {
 }
 
 .night .floor {
-  background: lightgreen !important;
+  background: var(--color-floor) !important;
+}
+
+.night td.low .floor {
+  background: var(--color-floor-low) !important;
 }
 
 .night .tree,

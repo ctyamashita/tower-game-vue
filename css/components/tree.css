@@ -63,8 +63,13 @@
 
 td:has(.tree):has(#player) .floor,
 td:has(.tree) .floor {
-  background: radial-gradient(var(--shadow-color) 40%, lightgreen 60%);
+  background: radial-gradient(var(--shadow-color) 40%, var(--color-floor) 60%);
   transition: var(--iso-animation-time);
+}
+
+td.low:has(.tree):has(#player) .floor,
+td.low:has(.tree) .floor {
+  background: radial-gradient(var(--shadow-color-low) 40%, var(--color-floor-low) 60%);
 }
 
 td:has(#player) .tree {
@@ -88,13 +93,13 @@ td:has(#player) .trunk-tree {
 
 td:has(.tree) #player {
   position: absolute;
-  top: 30%;
-  right: 20%;
+  /* top: 15%;
+  right: -15%; */
 }
 
 .iso td:has(.tree) #player {
-  top: 30%;
-  right: 20%;
+  /* top: 5%;
+  right: -5%; */
   transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(5%);
   transition: var(--iso-animation-time);
 }

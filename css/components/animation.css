@@ -36,25 +36,106 @@
 @keyframes portal {
   0%   { filter: hue-rotate(0); transform: scale(1); }
   50%  { filter: hue-rotate(180deg); transform: scale(1.1); }
-  100% {filter: hue-rotate(0deg); transform: scale(1); }
+  100% { filter: hue-rotate(0deg); transform: scale(1); }
 }
 
 @keyframes ascend {
-  0%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-50%); background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 0 0 white; }
-  70%  { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-500%); background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 0 1em 1em rgba(255,255,255,.6); }
-  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-800%) scale(0); background-color: white; box-shadow: 0 0 1em 0 white;}
+  0%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-15%); background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 0 0 white; }
+  70%  { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%); background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 0 1em 1em rgba(255,255,255,.6); }
+  80% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-300%) scale(0); background-color: white; box-shadow: 0 0 1em 0 white;}
+  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-800%) scale(0);}
 }
 
 @keyframes land {
-  0%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-800%) scale(0); box-shadow: 0 0 1em 0 white;  opacity: 1;}
-  30%  { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-500%); opacity: 1;}
-  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-50%); opacity: 1;}
+  0%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%) scale(0); }
+  15%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%); box-shadow: 0 0 1em 0 white;  opacity: 1;}
+  30%  { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%); opacity: 1;}
+  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-15%); opacity: 1;}
 }
 
 @keyframes land-night {
-  0%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-800%) scale(0); box-shadow: 0 0 1em 0 white;  opacity: 1;}
-  30%  { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-500%); box-shadow: 0 0 1em 1em rgba(255,255,255,.6);  opacity: 1;}
-  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-50%);  opacity: 1;}
+  0%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%) scale(0); }
+  15%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%); box-shadow: 0 0 1em 0 white;  opacity: 1;}
+  30%  { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%); box-shadow: 0 0 1em 1em rgba(255,255,255,.6);  opacity: 1;}
+  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-15%);  opacity: 1;}
+}
+
+@keyframes land-shadow {
+  0%    { background: radial-gradient(var(--shadow-color) 0%, var(--color-floor) 0%);}
+  47%   { background: radial-gradient(var(--shadow-color) 0%, var(--color-floor) 1%);}
+  48%   { background: radial-gradient(var(--shadow-color) 0%, var(--color-floor) 2%);}
+  49%   { background: radial-gradient(var(--shadow-color) 0%, var(--color-floor) 3%);}
+  50%   { background: radial-gradient(var(--shadow-color) 0%, var(--color-floor) 4%);}
+  51%   { background: radial-gradient(var(--shadow-color) 1%, var(--color-floor) 5%);}
+  52%   { background: radial-gradient(var(--shadow-color) 2%, var(--color-floor) 6%);}
+  53%   { background: radial-gradient(var(--shadow-color) 3%, var(--color-floor) 7%);}
+  54%   { background: radial-gradient(var(--shadow-color) 4%, var(--color-floor) 8%);}
+  55%   { background: radial-gradient(var(--shadow-color) 5%, var(--color-floor) 9%);}
+  56%   { background: radial-gradient(var(--shadow-color) 6%, var(--color-floor) 10%);}
+  57%   { background: radial-gradient(var(--shadow-color) 7%, var(--color-floor) 11%);}
+  58%   { background: radial-gradient(var(--shadow-color) 8%, var(--color-floor) 12%);}
+  59%   { background: radial-gradient(var(--shadow-color) 9%, var(--color-floor) 13%);}
+  60%   { background: radial-gradient(var(--shadow-color) 10%, var(--color-floor) 14%);}
+  61%   { background: radial-gradient(var(--shadow-color) 11%, var(--color-floor) 15%);}
+  62%   { background: radial-gradient(var(--shadow-color) 12%, var(--color-floor) 16%);}
+  63%   { background: radial-gradient(var(--shadow-color) 13%, var(--color-floor) 17%);}
+  64%   { background: radial-gradient(var(--shadow-color) 14%, var(--color-floor) 18%);}
+  65%   { background: radial-gradient(var(--shadow-color) 15%, var(--color-floor) 19%);}
+  66%   { background: radial-gradient(var(--shadow-color) 16%, var(--color-floor) 20%);}
+  67%   { background: radial-gradient(var(--shadow-color) 17%, var(--color-floor) 21%);}
+  68%   { background: radial-gradient(var(--shadow-color) 18%, var(--color-floor) 22%);}
+  69%   { background: radial-gradient(var(--shadow-color) 19%, var(--color-floor) 23%);}
+  70%   { background: radial-gradient(var(--shadow-color) 20%, var(--color-floor) 24%);}
+  71%   { background: radial-gradient(var(--shadow-color) 21%, var(--color-floor) 25%);}
+  72%   { background: radial-gradient(var(--shadow-color) 22%, var(--color-floor) 26%);}
+  73%   { background: radial-gradient(var(--shadow-color) 23%, var(--color-floor) 27%);}
+  74%   { background: radial-gradient(var(--shadow-color) 24%, var(--color-floor) 28%);}
+  75%   { background: radial-gradient(var(--shadow-color) 25%, var(--color-floor) 29%);}
+  76%   { background: radial-gradient(var(--shadow-color) 26%, var(--color-floor) 30%);}
+  77%   { background: radial-gradient(var(--shadow-color) 27%, var(--color-floor) 31%);}
+  78%   { background: radial-gradient(var(--shadow-color) 28%, var(--color-floor) 32%);}
+  79%   { background: radial-gradient(var(--shadow-color) 29%, var(--color-floor) 33%);}
+  80%  { background: radial-gradient(var(--shadow-color) 30%, var(--color-floor) 34%);}
+  100%  { background: radial-gradient(var(--shadow-color) 30%, var(--color-floor) 34%);}
+}
+
+@keyframes land-shadow-low {
+  0%    { background: radial-gradient(var(--shadow-color-low) 0%, var(--color-floor-low) 0%);}
+  47%   { background: radial-gradient(var(--shadow-color-low) 0%, var(--color-floor-low) 1%);}
+  48%   { background: radial-gradient(var(--shadow-color-low) 0%, var(--color-floor-low) 2%);}
+  49%   { background: radial-gradient(var(--shadow-color-low) 0%, var(--color-floor-low) 3%);}
+  50%   { background: radial-gradient(var(--shadow-color-low) 0%, var(--color-floor-low) 4%);}
+  51%   { background: radial-gradient(var(--shadow-color-low) 1%, var(--color-floor-low) 5%);}
+  52%   { background: radial-gradient(var(--shadow-color-low) 2%, var(--color-floor-low) 6%);}
+  53%   { background: radial-gradient(var(--shadow-color-low) 3%, var(--color-floor-low) 7%);}
+  54%   { background: radial-gradient(var(--shadow-color-low) 4%, var(--color-floor-low) 8%);}
+  55%   { background: radial-gradient(var(--shadow-color-low) 5%, var(--color-floor-low) 9%);}
+  56%   { background: radial-gradient(var(--shadow-color-low) 6%, var(--color-floor-low) 10%);}
+  57%   { background: radial-gradient(var(--shadow-color-low) 7%, var(--color-floor-low) 11%);}
+  58%   { background: radial-gradient(var(--shadow-color-low) 8%, var(--color-floor-low) 12%);}
+  59%   { background: radial-gradient(var(--shadow-color-low) 9%, var(--color-floor-low) 13%);}
+  60%   { background: radial-gradient(var(--shadow-color-low) 10%, var(--color-floor-low) 14%);}
+  61%   { background: radial-gradient(var(--shadow-color-low) 11%, var(--color-floor-low) 15%);}
+  62%   { background: radial-gradient(var(--shadow-color-low) 12%, var(--color-floor-low) 16%);}
+  63%   { background: radial-gradient(var(--shadow-color-low) 13%, var(--color-floor-low) 17%);}
+  64%   { background: radial-gradient(var(--shadow-color-low) 14%, var(--color-floor-low) 18%);}
+  65%   { background: radial-gradient(var(--shadow-color-low) 15%, var(--color-floor-low) 19%);}
+  66%   { background: radial-gradient(var(--shadow-color-low) 16%, var(--color-floor-low) 20%);}
+  67%   { background: radial-gradient(var(--shadow-color-low) 17%, var(--color-floor-low) 21%);}
+  68%   { background: radial-gradient(var(--shadow-color-low) 18%, var(--color-floor-low) 22%);}
+  69%   { background: radial-gradient(var(--shadow-color-low) 19%, var(--color-floor-low) 23%);}
+  70%   { background: radial-gradient(var(--shadow-color-low) 20%, var(--color-floor-low) 24%);}
+  71%   { background: radial-gradient(var(--shadow-color-low) 21%, var(--color-floor-low) 25%);}
+  72%   { background: radial-gradient(var(--shadow-color-low) 22%, var(--color-floor-low) 26%);}
+  73%   { background: radial-gradient(var(--shadow-color-low) 23%, var(--color-floor-low) 27%);}
+  74%   { background: radial-gradient(var(--shadow-color-low) 24%, var(--color-floor-low) 28%);}
+  75%   { background: radial-gradient(var(--shadow-color-low) 25%, var(--color-floor-low) 29%);}
+  76%   { background: radial-gradient(var(--shadow-color-low) 26%, var(--color-floor-low) 30%);}
+  77%   { background: radial-gradient(var(--shadow-color-low) 27%, var(--color-floor-low) 31%);}
+  78%   { background: radial-gradient(var(--shadow-color-low) 28%, var(--color-floor-low) 32%);}
+  79%   { background: radial-gradient(var(--shadow-color-low) 29%, var(--color-floor-low) 33%);}
+  80%   { background: radial-gradient(var(--shadow-color-low) 30%, var(--color-floor-low) 34%);}
+  100%  { background: radial-gradient(var(--shadow-color-low) 30%, var(--color-floor-low) 34%);}
 }
 
 /* Lighting animation */

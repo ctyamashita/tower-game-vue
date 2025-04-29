@@ -14,10 +14,12 @@ table#board td {
   position: relative;
   text-align: center;
   padding: 0;
+  transition: var(--iso-animation-time);
 }
 
 table#board:has(.spawn) td {
   opacity: 0;
+  transition: 0;
   animation: show-blocks 1s forwards;
 }
 
