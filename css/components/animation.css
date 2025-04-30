@@ -34,16 +34,18 @@
 }
 
 @keyframes portal {
-  0%   { filter: hue-rotate(0); transform: scale(1); }
-  50%  { filter: hue-rotate(180deg); transform: scale(1.1); }
-  100% { filter: hue-rotate(0deg); transform: scale(1); }
+  0%   { filter: hue-rotate(0); transform: scale(1.05); }
+  25%  { filter: hue-rotate(180deg); transform: scale(1); }
+  50%  { filter: hue-rotate(360deg); transform: scale(1.05); }
+  75%  { filter: hue-rotate(180deg); transform: scale(1); }
+  100% { filter: hue-rotate(0); transform: scale(1.05); }
 }
 
 @keyframes ascend {
   0%   { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-15%); background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 0 0 white; }
   70%  { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%); background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 0 1em 1em rgba(255,255,255,.6); }
-  80% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-300%) scale(0); background-color: white; box-shadow: 0 0 1em 0 white;}
-  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-800%) scale(0);}
+  80% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-200%); background-color: white; box-shadow: 0 0 1em 0 white;}
+  100% { transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-500%) scale(0);}
 }
 
 @keyframes land {
@@ -95,7 +97,7 @@
   77%   { background: radial-gradient(var(--shadow-color) 27%, var(--color-floor) 31%);}
   78%   { background: radial-gradient(var(--shadow-color) 28%, var(--color-floor) 32%);}
   79%   { background: radial-gradient(var(--shadow-color) 29%, var(--color-floor) 33%);}
-  80%  { background: radial-gradient(var(--shadow-color) 30%, var(--color-floor) 34%);}
+  80%   { background: radial-gradient(var(--shadow-color) 30%, var(--color-floor) 34%);}
   100%  { background: radial-gradient(var(--shadow-color) 30%, var(--color-floor) 34%);}
 }
 
@@ -136,6 +138,18 @@
   79%   { background: radial-gradient(var(--shadow-color-low) 29%, var(--color-floor-low) 33%);}
   80%   { background: radial-gradient(var(--shadow-color-low) 30%, var(--color-floor-low) 34%);}
   100%  { background: radial-gradient(var(--shadow-color-low) 30%, var(--color-floor-low) 34%);}
+}
+
+@keyframes player-light {
+  0% {
+    filter: drop-shadow(0 max(-.5vw, -.5vh) min(1vw, 1vh) orange) sepia(.5)
+  }
+  50% {
+    filter: drop-shadow(0 max(-0.25vw, -.25vh) min(.75vw, .75vh) orange) sepia(.5)
+  }
+  100% {
+    filter: drop-shadow(0 max(-.5vw, -.5vh) min(1vw, 1vh) orange) sepia(.5)
+  }
 }
 
 /* Lighting animation */

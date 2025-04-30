@@ -109,7 +109,8 @@
         </div>
       </div>
       <div class="floor-display-container">
-        <p class="floor-display"><small>floor </small><span>{{floor}}</span> / <small>steps </small> {{time.movementCount}}</p>
+        <p class="floor-display"><span>{{floor}}</span> <i class="fa-solid fa-stairs"></i></p>
+        <p class="floor-display"><span>{{time.movementCount}}</span> <i class="fa-solid fa-shoe-prints fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i></p>
         <button v-on:click="enableAudio" class="audio-btn">
           <i class="fa-solid fa-volume-xmark"></i>
         </button>

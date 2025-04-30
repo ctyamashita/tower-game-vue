@@ -11,6 +11,8 @@
   border-radius: 8px;
 }
 
+/* New game modal */
+
 .swal2-popup #new-game-container {
   display: flex;
   justify-content: center;
@@ -43,8 +45,8 @@
 
 .swal2-popup #new-game-class-container {
   display: grid;
-  grid-template-columns: 64px 64px 64px;
-  grid-template-rows: 64px 64px 64px;
+  grid-template-columns: min(15vw, 64px) min(15vw, 64px) min(15vw, 64px);
+  grid-template-rows: min(15vw, 64px) min(15vw, 64px) min(15vw, 64px);
   gap: 1rem;
   margin: auto;
 }
@@ -56,7 +58,7 @@
 .swal2-popup #new-game-class-container label {
   display: block;
   border-radius: 100px;
-  min-height: 64px;
+  min-height: min(15vw, 64px);
   width: 100%;
   opacity: .3;
   filter: invert(1);

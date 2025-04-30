@@ -102,18 +102,18 @@
                   -2px 0 white,
                   -2px 1px white,
                   -2px 2px white;
-  --outline-board:  drop-shadow(-1px -1px 0 white) 
-                    drop-shadow(1px 1px 0 white) 
-                    drop-shadow(1px -1px 0 white) 
-                    drop-shadow(-1px 1px 0 white);
-  --outline-high-box: drop-shadow(-1px -1px 0 orange) 
-                      drop-shadow(1px 1px 0 orange) 
-                      drop-shadow(1px -1px 0 orange) 
-                      drop-shadow(-1px 1px 0 orange);
-  --outline-box:  drop-shadow(-1px -1px 0 var(--lightgray)) 
-                  drop-shadow(1px 1px 0 var(--lightgray)) 
-                  drop-shadow(1px -1px 0 var(--lightgray)) 
-                  drop-shadow(-1px 1px 0 var(--lightgray));
+  --outline-board:  drop-shadow(-.5px -.5px 0 white) 
+                    drop-shadow(.5px .5px 0 white) 
+                    drop-shadow(.5px -.5px 0 white) 
+                    drop-shadow(-.5px .5px 0 white);
+  --outline-high-box: drop-shadow(-.5px -.5px 0 orange) 
+                      drop-shadow(.5px .5px 0 orange) 
+                      drop-shadow(.5px -.5px 0 orange) 
+                      drop-shadow(-.5px .5px 0 orange);
+  --outline-box:  drop-shadow(-.5px -.5px 0 var(--lightgray)) 
+                  drop-shadow(.5px .5px 0 var(--lightgray)) 
+                  drop-shadow(.5px -.5px 0 var(--lightgray)) 
+                  drop-shadow(-.5px .5px 0 var(--lightgray));
 }
 
 * {

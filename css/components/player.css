@@ -4,11 +4,11 @@
   transition: transform var(--iso-animation-time), box-shadow var(--iso-animation-time);
 }
 
-.iso td:has(#player) .floor {
+.iso td:has(#player.spawn) .floor {
   animation: 3s land-shadow 2s forwards;
 }
 
-.iso td.low:has(#player) .floor {
+.iso td.low:has(#player.spawn) .floor {
   animation: 3s land-shadow-low 2s forwards;
 }
 

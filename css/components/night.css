@@ -27,25 +27,30 @@ body:has(.sunset) {
 }
 
 .night .box.high {
-  filter: var(--outline-high-box) hue-rotate(-45deg) saturate(2);
+  filter: var(--outline-high-box) hue-rotate(-45deg) saturate(2) brightness(.3);
 }
 
-.night .floor {
+.night .floor,
+.sunrise .floor {
   background: var(--color-floor) !important;
 }
 
-.night td.low .floor {
+.night td.low .floor,
+.sunrise td.low .floor {
   background: var(--color-floor-low) !important;
 }
 
 .night .tree,
-.night .spot {
+.night .spot,
+.sunrise .tree,
+.sunrise .spot {
   opacity: 0;
   transition: opacity 3s;
 }
 
 .night #player {
-  filter: drop-shadow(0px 0px 6px white) !important;
+  animation: 5s player-light infinite;
+  /* filter: drop-shadow(0px 0px 6px white) !important; */
   /* box-shadow: 0 0 0 var(--outline) dimgray, inset -0.05em 0.05em 0.15em 0.1em lightgreen, 0 0 .5em 0 white; */
 }
 
@@ -54,9 +59,14 @@ body:has(.sunset) {
   opacity: 1;
 }
 
-.night td:has(#player) .tree .top-tree,
-.night td:has(#player) .tree .trunk-tree,
-.night td:has(#player) .tent {
+.night .iso td:has(#player) .tree,
+.night .iso td:has(#player) .spot {
+  opacity: 1;
+}
+
+.night .iso td:has(#player) .tree .top-tree,
+.night .iso td:has(#player) .tree .trunk-tree,
+.night .iso td:has(#player) .tent {
   opacity: 1;
   filter: brightness(.3);
 }
@@ -75,7 +85,8 @@ body:has(.sunset) {
 
 .sunset .floor,
 .sunset .top-tree,
-.sunset .trunk-tree {
+.sunset .trunk-tree,
+.sunset .high.box {
   filter: brightness(1) hue-rotate(-45deg);
 }
 
@@ -83,4 +94,8 @@ body:has(.sunset) {
 .sunrise .top-tree,
 .sunrise .trunk-tree {
   filter: brightness(.6) hue-rotate(60deg);
+}
+
+.sunrise .high.box {
+  filter: brightness(.6);
 }

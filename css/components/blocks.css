@@ -2,15 +2,18 @@
 .floor {
   position: absolute;
   top: 0;
-  outline: solid calc(var(--outline)/2) rgba(120, 200, 120, 0.7);
-  outline-offset: calc(var(--outline) / -4);
-  box-shadow: 0 0 0 0 lightgreen;
+  /* outline: solid calc(var(--outline)/2) rgba(120, 200, 120, 0.7);
+  outline-offset: calc(var(--outline) / -4); */
+  box-shadow: inset 0 0 0 .5px var(--shadow-color);
   transition: var(--iso-animation-time);
   background-color: lightgreen;
 }
 
+
 td:has(#player:not(.spawn)) .floor {
   background: radial-gradient(var(--shadow-color) 30%, var(--color-floor) 35%);
+  outline: dashed max(.5vh, .85vw) crimson;
+  outline-offset: max(-3vh, -3vw);
 }
 
 td.low:has(#player:not(.spawn)) .floor {
@@ -19,7 +22,7 @@ td.low:has(#player:not(.spawn)) .floor {
 
 /* iso floor */
   .iso .floor {
-    box-shadow: 1px 1px 0 1px lightgreen;
+    box-shadow: 1px 1px 0 1px lightgreen, 0 0 0 1px var(--shadow-color);
     /* box-shadow: 2px 0px 0 0 var(--white); */
     transition: var(--iso-animation-time);
     border-radius: var(--border-radius)
@@ -70,7 +73,7 @@ td.low:has(#player:not(.spawn)) .floor {
 
 /* iso box */
   .iso .box {
-    transform: translate(-72%, -72%) scale(.975);
+    transform: translate(-70%, -70%) scale(.975);
     box-shadow: 1px 1px 0 1px var(--white);
     filter: var(--outline-box);
   }
@@ -101,6 +104,15 @@ td.low:has(#player:not(.spawn)) .floor {
   td.low:has(.high.box) .floor, td:has(#player) .high.box .floor {
     background: var(--shadow-color-low) !important;
   }
+  
+  table:not(.iso) td .high.box {
+    filter: none;
+    box-shadow: inset 0 0 0 1px orange;
+  }
+
+  /* table:not(.iso) td:has(.high.box) .floor .walls {
+    display: none;
+  } */
 
   td:has(#player) .high.box {
     opacity: .5;
@@ -129,7 +141,7 @@ td.low:has(#player:not(.spawn)) .floor {
 
 td.low .floor {
   background-color: var(--color-floor-low);
-  outline-color: var(--gray);
+  box-shadow: inset 0 0 0 .5px var(--gray);
 }
 
 .iso td {
@@ -143,7 +155,7 @@ td.low .floor {
 }
 
 .iso td.low .floor {
-  box-shadow: 1px 1px 0 1px var(--color-floor-low);
+  box-shadow: 1px 1px 0 1px var(--color-floor-low), 0 0 0 1px var(--shadow-color-low);
 }
 
 .iso td.high {
@@ -239,6 +251,11 @@ td.low .floor {
     height: 73%;
     transition: calc(var(--iso-animation-time)/2);
   }
+  
+  .iso:not(#keys-display) .floor .r-wall,
+  .iso:not(#keys-display) .floor .l-wall {
+    outline: solid .5px var(--lightgray);
+  }
 
 /* iso walls end */
 /* walls end */
@@ -265,7 +282,7 @@ td.low .floor {
 
   .spot i {
     color: brown;
-    font-size: min(3vw, 1.2rem);
+    font-size: min(3vw, 1.2rem, 3vh);
   }
 
   td.low:has(.spot) .floor {
@@ -282,7 +299,7 @@ td.low .floor {
 
   td:has(.spot) #player {
     /* opacity: 0; */
-    transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4);
+    transform: rotateX(0deg) rotateZ(-45deg) rotateY(0deg) scaleY(1.4) translateY(-15%);
   }
 
   td:has(.tree):has(.tent) #player {
@@ -319,7 +336,7 @@ td.low .floor {
   }
 
   .iso td:has(#player) .spot {
-    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-240%) rotate(-45deg) scale(2);
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(0deg) scaleX(1.4) translateX(-240%) rotate(-45deg) scale(1.5);
     font-size: .5em;
   }
 

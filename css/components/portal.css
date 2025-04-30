@@ -7,7 +7,11 @@ td:has(.portal) #player {
 }
 
 .iso td:has(.portal) #player {
-  animation: 2s ascend 1s forwards;
+  animation: 2s ascend .5s forwards;
+}
+
+td:has(.portal):has(#player) .floor {
+  outline: none !important;
 }
 
 td:has(.portal) {
@@ -16,22 +20,27 @@ td:has(.portal) {
   justify-content: center;
 }
 
+.iso .portal {
+  box-shadow: min(.2vw, .2vh) min(.2vw, .2vh) 0 0 rgba(0,0,0,.3), min(.2vw, .2vh) min(.2vw, .2vh) 0 min(.4vw, .4vh) deeppink, 0px 0px 0 min(.8vw, .8vh) rgba(0,0,0,.3);
+}
+
 .portal {
   position: absolute;
   width: 50% !important;
   height: 50% !important;
   border-radius: 50%;
-  background: repeating-radial-gradient(cadetblue, cadetblue 2px, transparent 2px, transparent 4px);
-  animation: portal 3s infinite;
+  box-shadow: 0 0 0 0 rgba(0,0,0,.3), 0 0 0 min(.4vw, .4vh) deeppink, 0px 0px 0 min(.8vw, .8vh) rgba(0,0,0,.3);
+  background: white;
+  animation: portal 6s infinite;
 }
 
 #beacon {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 10%;
-  width: 10%;
-  background: white;
+  top: 40%;
+  left: 40%;
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,.7);
   transition: var(--iso-animation-time);
   transform: rotate(-45deg) scaleY(1) translateY(-55%);
   border-radius: 50%;
@@ -39,9 +48,9 @@ td:has(.portal) {
 
 .iso #beacon {
   background: linear-gradient(0deg, rgba(255, 255, 255, .6), transparent);
-  top: -270%;
+  top: -170%;
   left: 30%;
-  height: 700%;
+  height: 500%;
   width: 100%;
   margin: 0 auto;
   transform: rotate(-45deg) scaleY(1.5) translateY(-50%);

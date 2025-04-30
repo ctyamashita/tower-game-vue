@@ -14,7 +14,7 @@
 }
 
 #menu .bar-fill {
-  transition-delay: .5s;
+  /* transition-delay: .5s; */
 }
 
 #menu .bar-container:first-child {
@@ -72,14 +72,12 @@
 #menu .job {
   padding-bottom: 4px;
   border-bottom: solid 2px;
+  width: auto;
 }
 
 #menu .job p {
   font-size: 1.2rem;
-  display: flex;
-  align-items: baseline;
   text-transform: uppercase;
-  gap: 3px;
 }
 
 #menu .job small {
@@ -146,20 +144,53 @@
 
 .floor-display-container {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 16px;
+  right: 12px;
   margin: 0;
   font-size: 1.5em;
   background: var(--black);
-  padding: 0.25em 0.25em .25em .75em;
+  padding: .3rem;
   color: white;
-  border-radius: 50px;
+  border-radius: 20px;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: end;
+  gap: .3rem;
+}
+
+.floor-display-container:hover,
+.floor-display-container:focus {
+  padding: .3rem .3rem .3rem .6rem;
+}
+
+.floor-display-container:hover span,
+.floor-display-container:focus span {
+  display: block;
+}
+
+.floor-display span {
+  display: none;
+  flex-grow: 1;
+  text-align: end;
 }
 
 .floor-display-container p {
   margin: auto;
+  display: flex;
+  gap: 1ch;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.floor-display i {
+  font-size: .8rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  align-content: center;
+  background-color: steelblue;
+  border-radius: 50px;
 }
 
 .audio-btn {
@@ -169,9 +200,19 @@
   width: 2rem;
   text-align: center;
   color: var(--black);
+  cursor: pointer;
 }
 
 .audio-btn:has(.fa-volume-xmark) {
+  opacity: .3;
   background-color: grey;
   color: white;
+}
+
+.audio-btn:hover {
+  opacity: 1;
+}
+
+#clock {
+  transform: rotate(-90deg);
 }
