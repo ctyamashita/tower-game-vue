@@ -46,7 +46,7 @@
   background-color: transparent;
   box-shadow: max(1.7vw,1.7vh) max(1.7vw,1.7vh) 0 max(.75vw, .75vh) rgba(0, 0, 0, .3);
   transition: var(--iso-animation-time);
-  margin: 0 2em 3.5em 0;
+  margin: 0 2rem 2.5rem 0;
 }
 
 #keys-display.iso button {

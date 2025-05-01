@@ -109,11 +109,19 @@
         </div>
       </div>
       <div class="floor-display-container">
-        <p class="floor-display"><span>{{floor}}</span> <i class="fa-solid fa-stairs"></i></p>
-        <p class="floor-display"><span>{{time.movementCount}}</span> <i class="fa-solid fa-shoe-prints fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i></p>
-        <button v-on:click="enableAudio" class="audio-btn">
-          <i class="fa-solid fa-volume-xmark"></i>
-        </button>
+        <p class="floor-display"><span>{{leadingZero(floor, 6)}}</span> <i class="fa-solid fa-stairs"></i></p>
+        <p class="floor-display"><span>{{leadingZero(time.movementCount, 6)}}</span> <i class="fa-solid fa-shoe-prints fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i></p>
+        <div class="options-btn-container">
+          <button v-on:click="reboot" class="reboot-btn">
+            <i class="fa-solid fa-power-off"></i>
+          </button>
+          <button v-on:click="info" class="info-btn">
+            <i class="fa-solid fa-info"></i>
+          </button>
+          <button v-on:click="enableAudio" class="audio-btn">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+        </div>
       </div>
       <div id="board-container">
         <table id="board" :class="board.isoView ? 'iso' : ''">

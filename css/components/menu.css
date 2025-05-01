@@ -147,10 +147,10 @@
   top: 16px;
   right: 12px;
   margin: 0;
-  font-size: 1.5em;
+  /* font-size: 1rem; */
   background: var(--black);
-  padding: .3rem;
-  color: white;
+  padding: .75ch;
+  color: lightsalmon;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -158,18 +158,8 @@
   gap: .3rem;
 }
 
-.floor-display-container:hover,
-.floor-display-container:focus {
-  padding: .3rem .3rem .3rem .6rem;
-}
-
-.floor-display-container:hover span,
-.floor-display-container:focus span {
-  display: block;
-}
-
 .floor-display span {
-  display: none;
+  font-family: "DotGothic16", sans-serif;
   flex-grow: 1;
   text-align: end;
 }
@@ -177,10 +167,13 @@
 .floor-display-container p {
   margin: auto;
   display: flex;
-  gap: 1ch;
+  gap: .75ch;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  background-color: black;
+  box-shadow: inset 0 0 0 2px gray;
+  border-radius: 40px;
 }
 
 .floor-display i {
@@ -189,11 +182,19 @@
   height: 2rem;
   text-align: center;
   align-content: center;
-  background-color: steelblue;
+  box-shadow: inset 0 0 0 2px white;
+  outline-offset: -2px;
   border-radius: 50px;
 }
 
-.audio-btn {
+.options-btn-container {
+  display: flex;
+  justify-content: end;
+  gap: .5ch;
+  width: 100%;
+}
+
+.options-btn-container button {
   border: none;
   border-radius: 40px;
   height: 2rem;
@@ -201,16 +202,35 @@
   text-align: center;
   color: var(--black);
   cursor: pointer;
+  background-color: dimgrey;
 }
 
-.audio-btn:has(.fa-volume-xmark) {
+.options-btn-container button.audio-btn {
+  background-color: lightgreen;
+  color: var(--black);
+}
+
+.options-btn-container button.audio-btn:has(i.fa-volume-xmark) {
   opacity: .3;
   background-color: grey;
   color: white;
 }
 
-.audio-btn:hover {
-  opacity: 1;
+.options-btn-container button.info-btn:hover {
+  background-color: steelblue;
+}
+
+.options-btn-container button.reboot-btn:hover {
+  background-color: deeppink;
+}
+
+.options-btn-container button.reboot-btn:hover i,
+.options-btn-container button.info-btn:hover i {
+  color: white;
+}
+
+.options-btn-container button.audio-btn:hover {
+  opacity: 1 !important;
 }
 
 #clock {
