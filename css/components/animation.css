@@ -190,6 +190,18 @@
   100% { opacity: 1; transform: translateX(0px); }
 }
 
+@keyframes player-attack-hit-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  10%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  20%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  30%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  60%  { opacity: 1; filter: invert(0%) brightness(.6) sepia(0.3); }
+  70%  { opacity: 0; transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  80%  { opacity: 1; transform: translateX(-10px); filter: invert(70%) brightness(.6) sepia(0.3); }
+  90%  { opacity: 0; filter: brightness(.6) sepia(0.3); }
+  100% { opacity: 1; transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+}
+
 /* Enemy takes damage and Attack player */
 @keyframes enemy-attack-hit {
   0%   { opacity: 1; filter: invert(0%);}
@@ -203,6 +215,18 @@
   100% { transform: translateX(0px); }
 }
 
+@keyframes enemy-attack-hit-night {
+  0%   { opacity: 1; filter: invert(0%) brightness(.6) sepia(0.3);}
+  10%  { opacity: 0; transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  20%  { opacity: 1; transform: translateX(-10px); filter: invert(70%) brightness(.6) sepia(0.3);}
+  30%  { opacity: 0; filter: brightness(.6) sepia(0.3); }
+  40%  { opacity: 1; transform: translateX(0px); filter: brightness(.6) sepia(0.3);}
+  70%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  80%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  90%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  100% { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+}
+
 /* Player avoids the attack and Attack enemy */
 @keyframes player-attack-miss {
   0%   { transform: translateX(0px); }
@@ -212,6 +236,16 @@
   60%  { transform: translateX(0px); }
   90%  { transform: translateX(-40px); }
   100% { transform: translateX(0px); }
+}
+
+@keyframes player-attack-miss-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  10%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  20%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  50%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  60%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  90%  { transform: translateX(-40px); filter: brightness(.6) sepia(0.3); }
+  100% { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
 }
 
 /* Enemy avoids the attack and Attack player */
@@ -225,6 +259,16 @@
   100% { transform: translateX(0px); }
 }
 
+@keyframes enemy-attack-miss-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  10%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  20%  { transform: translateX(-40px); filter: brightness(.6) sepia(0.3); }
+  50%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  60%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  90%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  100% { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+}
+
 /* Just player attack the enemy */
 @keyframes player-attack {
   0%   { transform: translateX(0px); }
@@ -233,6 +277,15 @@
   30%  { transform: translateX(0px); }
   100% { transform: translateX(0px); }
 }
+
+@keyframes player-attack-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  10%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  20%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  30%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  100% { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+}
+
 /* Player takes damage and crit Attack enemy */
 @keyframes player-attack-hit-critical {
   0%   { transform: translateX(0px); }
@@ -248,6 +301,22 @@
   90%  { opacity: 0; transform: rotate(-2deg); filter: saturate(100); }
   95%  { transform: rotate(2deg) }
   100% { opacity: 1; transform: translateX(0px) rotate(0); }
+}
+
+@keyframes player-attack-hit-critical-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  10%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  20%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  30%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  60%  { opacity: 1; transform: rotate(-2deg); filter: invert(0%) brightness(.6) sepia(0.3); }
+  65%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  70%  { opacity: 0; transform: translateX(0px) rotate(-2deg); filter: brightness(.6) sepia(0.3); }
+  75%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  80%  { opacity: 1; transform: translateX(-20px) rotate(-2deg); filter: invert(70%) brightness(.6) sepia(0.3); }
+  85%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  90%  { opacity: 0; transform: rotate(-2deg); filter: saturate(100) brightness(.6) sepia(0.3); }
+  95%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  100% { opacity: 1; transform: translateX(0px) rotate(0); filter: brightness(.6) sepia(0.3); }
 }
 
 /* Enemy takes damage and crit Attack player */
@@ -267,9 +336,30 @@
   100% { transform: translateX(0px); }
 }
 
+@keyframes enemy-attack-hit-critical-night {
+  0%   { opacity: 1; transform: rotate(-2deg); filter: invert(0%) brightness(.6) sepia(0.3);}
+  5%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  10%  { opacity: 0; transform: translateX(0px) rotate(-2deg); filter: saturate(100) brightness(.6) sepia(0.3);}
+  15%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  20%  { opacity: 1; transform: translateX(-20px) rotate(-2deg); filter: invert(70%) brightness(.6) sepia(0.3);}
+  25%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  30%  { opacity: 0; transform: rotate(-2deg); filter: saturate(100) brightness(.6) sepia(0.3); }
+  35%  { transform: rotate(2deg); filter: brightness(.6) sepia(0.3); }
+  40%  { opacity: 1; transform: translateX(0px) rotate(0); filter: brightness(.6) sepia(0.3); }
+  70%  { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  80%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  90%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  100% { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+}
+
 @keyframes player-run {
   0%   { transform: translateX(0px); }
   100% { transform: translateX(-1000px); }
+}
+
+@keyframes player-run-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  100% { transform: translateX(-1000px); filter: brightness(.6) sepia(0.3); }
 }
 
 @keyframes player-failed-run-dmg {
@@ -281,11 +371,27 @@
   100% { opacity: 1; transform: translateX(0px); }
 }
 
+@keyframes player-failed-run-dmg-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  60%  { opacity: 1; filter: invert(0%) brightness(.6) sepia(0.3); }
+  70%  { opacity: 0; transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  80%  { opacity: 1; transform: translateX(-10px); filter: invert(70%) brightness(.6) sepia(0.3);}
+  90%  { opacity: 0; filter: brightness(.6) sepia(0.3); }
+  100% { opacity: 1; transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+}
+
 @keyframes enemy-attack-failed-run {
   0%   { transform: translateX(0px); }
   60%  { transform: translateX(-20px); }
   90%  { transform: translateX(40px); }
   100% { transform: translateX(0px); }
+}
+
+@keyframes enemy-attack-failed-run-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  60%  { transform: translateX(-20px); filter: brightness(.6) sepia(0.3); }
+  90%  { transform: translateX(40px); filter: brightness(.6) sepia(0.3); }
+  100% { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
 }
 
 /* enemy taking the attack */
@@ -298,6 +404,15 @@
   100% { opacity: 1; transform: translateX(0px); }
 }
 
+@keyframes enemy-hit-night {
+  0%   { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  30%  { opacity: 1; filter: invert(0%) brightness(.6) sepia(0.3); }
+  70%  { opacity: 0; transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+  80%  { opacity: 1; transform: translateX(-10px); filter: invert(70%) brightness(.6) sepia(0.3);}
+  90%  { opacity: 0; filter: brightness(.6) sepia(0.3); }
+  100% { opacity: 1; transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
+}
+
 /* enemy taking crit attack */
 @keyframes enemy-hit-critical {
   0%   { transform: translateX(0px) rotate(-2deg); }
@@ -308,8 +423,65 @@
   100% { opacity: 1; transform: translateX(0px) rotate(0); }
 }
 
+@keyframes enemy-hit-critical-night {
+  0%   { transform: translateX(0px) rotate(-2deg); filter: brightness(.6) sepia(0.3); }
+  30%  { opacity: 1; transform: rotate(2deg); filter: invert(0%) brightness(.6) sepia(0.3); }
+  70%  { opacity: 0; transform: translateX(0px) rotate(-2deg); filter: brightness(.6) sepia(0.3); }
+  80%  { opacity: 1; transform: translateX(-10px) rotate(2deg); filter: invert(70%) brightness(.6) sepia(0.3);}
+  90%  { opacity: 0; transform: rotate(-2deg); filter: brightness(.6) sepia(0.3); }
+  100% { opacity: 1; transform: translateX(0px) rotate(0); filter: brightness(.6) sepia(0.3); }
+}
+
 @keyframes bar-down {
   0%   { background: darkseagreen; }
   20%  { background-color: coral; }
   100% { background: darkseagreen; }
+}
+
+@keyframes bg-waves-day {
+  0%   {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65%, lightblue 68%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  5%   {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.2%, lightblue 68.2%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  10%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.4%, lightblue 68.4%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  15%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.6%, lightblue 68.6%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  20%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.8%, lightblue 68.8%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  25%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66%, lightblue 69%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  30%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.2%, lightblue 69.2%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  35%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.4%, lightblue 69.4%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  40%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.6%, lightblue 69.6%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  45%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.8%, lightblue 69.8%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  50%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 67%, lightblue 70%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  55%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.8%, lightblue 69.8%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  60%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.6%, lightblue 69.6%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  65%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.4%, lightblue 69.4%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  70%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66.2%, lightblue 69.2%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  75%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 66%, lightblue 69%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  80%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.8%, lightblue 68.8%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  85%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.6%, lightblue 68.6%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  90%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.4%, lightblue 68.4%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  95%  {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65.2%, lightblue 68.2%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+  100% {  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65%, lightblue 68%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);  }
+}
+
+@keyframes bg-waves-night {
+  0%   {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65%, slateblue 68%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  5%   {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.2%, slateblue 68.2%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  10%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.4%, slateblue 68.4%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  15%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.6%, slateblue 68.6%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  20%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.8%, slateblue 68.8%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  25%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66%, slateblue 69%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  30%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.2%, slateblue 69.2%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  35%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.4%, slateblue 69.4%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  40%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.6%, slateblue 69.6%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  45%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.8%, slateblue 69.8%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  50%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 67%, slateblue 70%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  55%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.8%, slateblue 69.8%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  60%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.6%, slateblue 69.6%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  65%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.4%, slateblue 69.4%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  70%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66.2%, slateblue 69.2%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  75%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 66%, slateblue 69%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  80%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.8%, slateblue 68.8%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  85%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.6%, slateblue 68.6%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  90%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.4%, slateblue 68.4%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  95%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.2%, slateblue 68.2%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
+  100% {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65%, slateblue 68%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
 }

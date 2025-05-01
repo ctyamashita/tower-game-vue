@@ -102,43 +102,49 @@
 /* Attack */
 /* Player takes damage and Attack enemy */
 #player-model .atk-hit { animation-name: player-attack-hit; }
+.night #player-model .atk-hit { animation-name: player-attack-hit-night; }
 
 /* Enemy takes damage and Attack player */
 #enemy-model .atk-hit { animation-name: enemy-attack-hit; }
+.night #enemy-model .atk-hit { animation-name: enemy-attack-hit-night; }
 
 /* Player avoid the attack and Attack enemy */
 #player-model .atk-miss { animation-name: player-attack-miss; }
+.night #player-model .atk-miss { animation-name: player-attack-miss-night; }
 
 /* Enemy avoid the attack and Attack player */
 #enemy-model .atk-miss { animation-name: enemy-attack-miss; }
+.night #enemy-model .atk-miss { animation-name: enemy-attack-miss-night; }
 
 /* Critical */
 #player-model .atk-hit.critical { animation-name: player-attack-hit-critical; }
+.night #player-model .atk-hit.critical { animation-name: player-attack-hit-critical-night; }
 
 #enemy-model .atk-hit.critical { animation-name: enemy-attack-hit-critical; }
+.night #enemy-model .atk-hit.critical { animation-name: enemy-attack-hit-critical-night; }
 
 /* #player-model .atk-miss.critical { animation-name: player-attack-miss-critical; }
 
 #enemy-model .atk-miss.critical { animation-name: enemy-attack-miss-critical; } */
 
 /* run */
-#player-model .run { 
-  animation: player-run 2s forwards;
-}
+#player-model .run { animation: player-run 2s forwards; }
+.night #player-model .run { animation: player-run-night 2s forwards; }
 
-#player-model .run-failed {
-  animation: player-failed-run-dmg calc(var(--turn-animation-time)/2);
-}
+#player-model .run-failed { animation: player-failed-run-dmg calc(var(--turn-animation-time)/2); }
+.night #player-model .run-failed { animation: player-failed-run-dmg-night calc(var(--turn-animation-time)/2); }
 
-#enemy-model .run-failed {
-  animation: enemy-attack-failed-run calc(var(--turn-animation-time)/2);
-}
+#enemy-model .run-failed { animation: enemy-attack-failed-run calc(var(--turn-animation-time)/2); }
+.night #enemy-model .run-failed { animation: enemy-attack-failed-run-night calc(var(--turn-animation-time)/2); }
 
 .player-atk { animation-name: player-attack; }
+.night .player-atk { animation-name: player-attack-night; }
 
 .enemy-hit { animation-name: enemy-hit; }
+.night .enemy-hit { animation-name: enemy-hit-night; }
 
 #enemy-model .enemy-hit.critical { animation-name: enemy-hit-critical; }
+.night #enemy-model .enemy-hit.critical { animation-name: enemy-hit-critical-night; }
 
 #enemy-model p {
   transform: scaleX(-1);
@@ -192,6 +198,39 @@
   background: linear-gradient(0deg, darkseagreen 0%, lightseagreen 20%, lightseagreen 30%, peachpuff 50%, peachpuff 57%, sandybrown 64%, sandybrown 64.7%, brown 64.7%, brown 65.2%, skyblue 60%, deepskyblue, mediumslateblue);
 }
 
+.sunset .modal-body {
+  filter: hue-rotate(-30deg);
+}
+
+.sunset #enemy-stats,
+.sunset #player-stats {
+  filter: hue-rotate(30deg);
+}
+
+.sunrise .modal-body {
+  filter: hue-rotate(180deg);
+}
+
+.sunrise #enemy-stats,
+.sunrise #player-stats,
+.sunrise .damage {
+  filter: hue-rotate(-180deg);
+}
+
+.night #enemy-model img,
+.night #player-model img {
+  filter: brightness(.6) sepia(0.3);
+}
+
+.night .modal-body {
+  background: linear-gradient(0deg, darkgreen 0%, darkolivegreen 30%, darkkhaki 50%, darkkhaki 57%, darkgoldenrod 64%, darkgoldenrod 64.7%, brown 64.7%, brown 65.2%, mediumslateblue 60%, rebeccapurple, midnightblue);
+}
+
+body:has(td.low > #player) .night .modal-body {
+  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 62%, slateblue 67%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);
+  animation: 5s bg-waves-night infinite;
+}
+
 body:has(td.low > #player) .modal-body {
-  background: linear-gradient(0deg, sandybrown 5%, peachpuff 40%, peachpuff 65%, lightblue 68%, skyblue 70%, dodgerblue 80%, royalblue 80%, royalblue 80.5%, skyblue 80%, deepskyblue);
+  animation: 5s bg-waves-day infinite;
 }
