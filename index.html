@@ -72,33 +72,34 @@
 <body>
   <div id="app">
     <div :class="time.light" >
+      <span id="time-display" class="hide">{{time.hour == 0 ? 12 : leadingZero(time.hour, 2)}}<small>{{ time.amOrPm }}</small></span>
       <canvas id="clock"></canvas>
       <div id="menu">
-        <div class="job"><img v-bind:src="'images/' + player.job + '-icon.png'"><p> {{player.job}} / <span><small>lvl </small><span class="lvl-number">{{player.lvl}}</span></span></p></div>
+        <div class="job"><img v-bind:src="'images/' + player.job + '-icon.png'"><p v-cloak> {{player.job}} / <span><small>lvl </small><span class="lvl-number">{{player.lvl}}</span></span></p></div>
         <div class="bar-container">
           <i class="fa-solid fa-heart"></i>
           <span class="bar">
             <span class="bar-fill" :style="`width: ${remainingHP(player)}%`"></span>
-            <small>{{player.hp}} / {{player.max_hp}}</small>
+            <small v-cloak>{{player.hp}} / {{player.max_hp}}</small>
           </span>
         </div>
         <div class="bar-container">
           <i class="fa-solid fa-book"></i>
           <span class="bar">
             <span class="bar-fill" :style="`width: ${player.xp}%`"></span>
-            <small>{{player.xp}} / 100</small>
+            <small v-cloak>{{player.xp}} / 100</small>
           </span>
         </div>
         <div>
-          <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`">attributes{{player.points > 0 ? `(${player.points})` : ''}}</button>
+          <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`" v-cloak>attributes{{player.points > 0 ? `(${player.points})` : ''}}</button>
           <table class="stats-table">
             <tr v-for="attr in Object.keys(player.attributes)">
               <th>
-                <div>{{attr}}</div>
+                <div v-cloak>{{attr}}</div>
               </th>
               <td>
                 <div>
-                  <p>{{player.attributes[attr]}}</p>
+                  <p v-cloak>{{player.attributes[attr]}}</p>
                   <button class="plus-btn" v-on:click="updateAttribute(attr)">
                     <i class="fa-solid fa-circle-plus"></i>
                   </button>
@@ -109,8 +110,8 @@
         </div>
       </div>
       <div class="floor-display-container">
-        <p class="floor-display"><span>{{leadingZero(floor, 6)}}</span> <i class="fa-solid fa-stairs"></i></p>
-        <p class="floor-display"><span>{{leadingZero(time.movementCount, 6)}}</span> <i class="fa-solid fa-shoe-prints fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i></p>
+        <p class="floor-display"><span v-cloak>{{leadingZero(floor, 7)}}</span> <i class="fa-solid fa-stairs"></i></p>
+        <p class="floor-display"><span v-cloak>{{leadingZero(time.movementCount, 7)}}</span> <i class="fa-solid fa-shoe-prints fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i></p>
         <div class="options-btn-container">
           <button v-on:click="reboot" class="reboot-btn">
             <i class="fa-solid fa-power-off"></i>

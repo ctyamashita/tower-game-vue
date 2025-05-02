@@ -45,9 +45,7 @@ body:has(.sunset) {
 }
 
 .night .tree,
-.night .spot,
-.sunrise .tree,
-.sunrise .spot {
+.night .spot {
   opacity: 0;
   transition: opacity 3s;
 }

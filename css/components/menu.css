@@ -153,9 +153,8 @@
   right: 12px;
   margin: 0;
   /* font-size: 1rem; */
-  background: var(--black);
+  background: rgba(0,0,0,.6);
   padding: .75ch;
-  color: lightsalmon;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -172,11 +171,12 @@
 .floor-display-container p {
   margin: auto;
   display: flex;
-  gap: .75ch;
+  gap: .5ch;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: black;
+  color: var(--black);
+  background-color: darkkhaki;
   box-shadow: inset 0 0 0 2px gray;
   border-radius: 40px;
 }
@@ -187,7 +187,7 @@
   height: 2rem;
   text-align: center;
   align-content: center;
-  box-shadow: inset 0 0 0 2px white;
+  box-shadow: inset 0 0 0 2px dimgray;
   outline-offset: -2px;
   border-radius: 50px;
 }
@@ -240,4 +240,15 @@
 
 #clock {
   transform: rotate(-90deg);
+}
+
+#time-display {
+  position: absolute;
+  bottom: 38px;
+  left: 80px;
+  color: var(--black);
+  background-color: darkkhaki;
+  padding: .25rem;
+  border-radius: 6px;
+  box-shadow: 0 0 0 2px;
 }

@@ -14,8 +14,8 @@
   transform: rotate(-45deg) translateX(-40%);
   width: 15% !important;
   height: 50% !important;
-  top: 12.5%;
-  right: 45%;
+  top: 8.5%;
+  right: 51%;
   transition: var(--iso-animation-time);
 }
 
