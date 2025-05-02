@@ -106,7 +106,6 @@ td.low:has(#player:not(.spawn)) .floor {
   }
   
   table:not(.iso) td .high.box {
-    filter: none;
     box-shadow: inset 0 0 0 1px orange;
   }
 

@@ -22,6 +22,10 @@ body:has(.sunset) {
   filter: brightness(.3);
 }
 
+.night .water {
+  filter: brightness(.7);
+}
+
 .night .box:not(.high) {
   filter: var(--outline-box) brightness(.3);
 }
@@ -83,10 +87,17 @@ body:has(.sunset) {
   filter: var(--outline-box) brightness(.6) hue-rotate(60deg);
 }
 
+.sunset .box.high {
+  filter: var(--outline-high-box) brightness(1) hue-rotate(-45deg);
+}
+
+.sunrise .box.high {
+  filter: var(--outline-high-box) brightness(.6);
+}
+
 .sunset .floor,
 .sunset .top-tree,
-.sunset .trunk-tree,
-.sunset .high.box {
+.sunset .trunk-tree {
   filter: brightness(1) hue-rotate(-45deg);
 }
 
@@ -94,8 +105,4 @@ body:has(.sunset) {
 .sunrise .top-tree,
 .sunrise .trunk-tree {
   filter: brightness(.6) hue-rotate(60deg);
-}
-
-.sunrise .high.box {
-  filter: brightness(.6);
 }

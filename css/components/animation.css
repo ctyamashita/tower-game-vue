@@ -485,3 +485,9 @@
   95%  {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65.2%, slateblue 68.2%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
   100% {  background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 65%, slateblue 68%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);  }
 }
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 orange; }
+  75%  { box-shadow: 0 0 0 2px orange; }
+  100% { box-shadow: 0 0 0 0 orange; }
+}
