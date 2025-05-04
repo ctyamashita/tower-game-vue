@@ -14,7 +14,7 @@
 @import url('components/night.css');
 @import url('components/swal-custom.css');
 
-/* @font-face {
+@font-face {
   font-family: "DotGothic16";
   src: url("fonts/DotGothic16/DotGothic16-Regular.ttf");
 }
@@ -25,9 +25,9 @@
 @font-face {
   font-family: "ZCOOL QingKe HuangYou";
   src: url("fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
-} */
+}
 
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Jersey+15&family=ZCOOL+QingKe+HuangYou&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Jersey+15&family=ZCOOL+QingKe+HuangYou&display=swap'); */
 
 :root {
   --border-radius: .2em;
