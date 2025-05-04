@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
   <link rel="icon" href="images/icons/favicon.ico">
-  <script src="lib/font-awesome.js" crossorigin="anonymous"></script>
+  <script src="lib/font-awesome.js" crossorigin="anonymous" defer></script>
   <link rel="stylesheet" href="css/style.css">
   
   <link rel="preload" href="css/fonts/Jersey_15/Jersey15-Regular.ttf" as="font" type="font/ttf" crossorigin />
@@ -63,8 +63,8 @@
   <script type="importmap">
     {
       "imports": {
-        "vue": "./modules/vue.esm-browser.prod.js",
-        "sweetalert2": "./modules/sweetalert2.esm.all.js"
+        "vue": "https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.esm-browser.prod.min.js",
+        "sweetalert2": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.16.1/sweetalert2.esm.all.min.js"
       }
     }
   </script>
@@ -193,6 +193,6 @@
     </div>
   </div>
   <!-- <script src="lib/projects.js" type="module"></script> -->
-  <script src="lib/board.js" type="module"></script>
+  <script src="lib/board.js" type="module" defer></script>
 </body>
 </html>
