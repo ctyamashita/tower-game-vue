@@ -195,42 +195,56 @@
 
 /* background battle */
 .modal-body {
+  position: relative;
+}
+
+.modal-body .bg-combat {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
   background: linear-gradient(0deg, darkseagreen 0%, lightseagreen 20%, lightseagreen 30%, peachpuff 50%, peachpuff 57%, sandybrown 64%, sandybrown 64.7%, brown 64.7%, brown 65.2%, skyblue 60%, deepskyblue, mediumslateblue);
 }
 
-.sunset .modal-body {
-  filter: hue-rotate(-30deg);
+.sunset #enemy-model,
+.sunset #player-model,
+.sunset .modal-body .bg-combat {
+  filter: hue-rotate(-30deg) sepia(.3);
 }
 
-.sunset #enemy-stats,
-.sunset #player-stats {
-  filter: hue-rotate(30deg);
+.sunset #enemy-model p,
+.sunset #player-model p {
+  filter: hue-rotate(30deg) sepia(0);
 }
 
-.sunrise .modal-body {
-  filter: hue-rotate(180deg);
+.sunrise #enemy-model,
+.sunrise #player-model,
+.sunrise .modal-body .bg-combat {
+  filter: hue-rotate(180deg) brightness(.8);
 }
 
-.sunrise #enemy-stats,
-.sunrise #player-stats,
-.sunrise .damage {
-  filter: hue-rotate(-180deg);
+.sunrise #enemy-model p,
+.sunrise #player-model p {
+  filter: hue-rotate(-180deg) brightness(1);
 }
 
 .night #enemy-model img,
-.night #player-model img {
+.night #player-model img,
+.night .modal-body .bg-combat {
   filter: brightness(.6) sepia(0.3);
 }
 
-.night .modal-body {
+.night .modal-body .bg-combat {
   background: linear-gradient(0deg, darkgreen 0%, darkolivegreen 30%, darkkhaki 50%, darkkhaki 57%, darkgoldenrod 64%, darkgoldenrod 64.7%, brown 64.7%, brown 65.2%, mediumslateblue 60%, rebeccapurple, midnightblue);
 }
 
-body:has(td.low > #player) .night .modal-body {
+body:has(td.low > #player) .night .modal-body .bg-combat {
   background: linear-gradient(0deg, sienna 5%, darkgoldenrod 40%, darkgoldenrod 62%, slateblue 67%, darkslateblue 70%, navy 80%, darkblue 80%, darkblue 80.5%, mediumslateblue 80%, midnightblue);
   animation: 5s bg-waves-night infinite;
 }
 
-body:has(td.low > #player) .modal-body {
+body:has(td.low > #player) .modal-body .bg-combat {
   animation: 5s bg-waves-day infinite;
 }

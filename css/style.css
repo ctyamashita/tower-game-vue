@@ -111,10 +111,10 @@
                       drop-shadow(.5px .5px 0 orange) 
                       drop-shadow(.5px -.5px 0 orange) 
                       drop-shadow(-.5px .5px 0 orange);
-  --outline-box:  drop-shadow(-.5px -.5px 0 var(--lightgray)) 
-                  drop-shadow(.5px .5px 0 var(--lightgray)) 
-                  drop-shadow(.5px -.5px 0 var(--lightgray)) 
-                  drop-shadow(-.5px .5px 0 var(--lightgray));
+  --outline-box:  drop-shadow(-.5px -.5px 0 var(--gray)) 
+                  drop-shadow(.5px .5px 0 var(--gray)) 
+                  drop-shadow(.5px -.5px 0 var(--gray)) 
+                  drop-shadow(-.5px .5px 0 var(--gray));
 }
 
 * {

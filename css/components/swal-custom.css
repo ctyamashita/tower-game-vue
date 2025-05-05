@@ -16,7 +16,7 @@
 }
 
 .swal2-confirm {
-  background-color: mediumseagreen;
+  background-color: darkolivegreen;
 }
 
 /* New game modal */
@@ -78,3 +78,70 @@
   filter: invert(0);
 }
 
+.swal2-popup:has(.hard-mode-btn) {
+  background-color: darkkhaki;
+}
+
+.swal2-popup:has(.hard-mode-btn) img {
+  filter: sepia(1);
+}
+
+.swal2-popup .hard-mode-btn input {
+  display: none;
+}
+
+.swal2-popup .hard-mode-btn {
+  display: block;
+  padding: 1rem 2rem;
+  box-shadow: inset 0 0 0 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1rem auto 0;
+  width: fit-content;
+  opacity: .3;
+  transition: .3s;
+}
+
+.swal2-popup:has(.hard-mode-btn input:checked) {
+  color: white;
+  background: brown;
+}
+
+.swal2-popup:has(.hard-mode-btn input:checked) img {
+  filter: none;
+}
+
+.swal2-popup .hard-mode-btn:has(:checked) {
+  opacity: 1;
+  color: var(--black);
+  box-shadow: none;
+  background: white;
+  transition: .3s;
+}
+
+.swiper {
+  margin: 10px 30px 0;
+  width: 200px;
+  height: 300px;
+}
+
+.swiper-slide {
+  background: burlywood;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 6px #6a410c;
+  filter: sepia(.5);
+}
+
+.swiper-slide p {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: #6a410c;
+}
+
+.swiper-slide input[type=radio] {
+  display: none;
+}
+
+.swiper-slide:has(:checked) {
+  box-shadow: inset 0 0 0 6px red;
+}

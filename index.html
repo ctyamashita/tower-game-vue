@@ -20,6 +20,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
   <link rel="icon" href="images/icons/favicon.ico">
   <script src="lib/font-awesome.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   
   <link rel="preload" href="css/fonts/Jersey_15/Jersey15-Regular.ttf" as="font" type="font/ttf" crossorigin />
@@ -64,7 +65,8 @@
     {
       "imports": {
         "vue": "https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.esm-browser.prod.min.js",
-        "sweetalert2": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.16.1/sweetalert2.esm.all.min.js"
+        "sweetalert2": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.16.1/sweetalert2.esm.all.min.js",
+        "swiper": "https://unpkg.com/swiper@8.4.7/swiper-bundle.esm.browser.min.js"
       }
     }
   </script>
@@ -182,6 +184,7 @@
                 <div class="job"><img v-bind:src="'images/' + player.job + '-icon.png'"><p>{{player.job}}</p></div>
               </div>
             </div>
+            <div class="bg-combat"></div>
           </div>
           <div class="modal-footer-cty bg-dark">
             <button id="atk-btn" v-on:click="combatTurn('attack')">Attack</button>
