@@ -77,6 +77,7 @@ self.addEventListener('install', function(e) {
         './',
         'https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.esm-browser.prod.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.16.1/sweetalert2.esm.all.min.js',
+        'https://unpkg.com/swiper@8.4.7/swiper-bundle.esm.browser.min.js',
         'lib/rand.js',
         'lib/helpers.js',
         'lib/Tile.js',
