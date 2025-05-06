@@ -2,7 +2,7 @@
   width: fit-content;
   min-width: 280px;
   background: whitesmoke;
-  border-radius: 16px;
+  border-radius: 32px;
   box-shadow: inset 0 0 0 3px whitesmoke, inset 0 0 0 6px;
 }
 
@@ -12,11 +12,36 @@
 }
 
 .swal2-cancel {
-  background-color: brown;
+  background-color: transparent;
+  color: var(--black);
+  outline: solid 2px;
+  outline-offset: -2px;
+}
+
+.swal2-cancel:focus {
+  box-shadow: 0 0 0 2px rgba(165, 42, 42, 0.4);
 }
 
 .swal2-confirm {
-  background-color: darkolivegreen;
+  background-color: dimgray;
+  box-shadow: inset 0 0 0 4px var(--black);
+}
+
+.swal2-confirm:has(i),
+.swal2-cancel:has(i) {
+  border-radius: 100px;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+}
+
+.swal2-confirm i {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.swal2-confirm:focus {
+  box-shadow: inset 0 0 0 4px var(--black), 0 0 0 2px rgba(85, 107, 47, 0.4);
 }
 
 /* New game modal */
@@ -78,12 +103,9 @@
   filter: invert(0);
 }
 
-.swal2-popup {
-  background-color: whitesmoke;
-}
-
 .swal2-popup:has(.swal2-icon:empty) {
-  background-color: darkkhaki;
+  background-color: khaki;
+  box-shadow: inset 2px 2px 0 0px red, inset -2px -2px 0 2px firebrick,inset 0 -70px 0 6px crimson, inset 0 0 0 6px crimson, inset 0 0 0 12px brown, inset 0 -64px 0 12px brown, inset 0 0 0 6px, inset 0 0 50px 36px darkkhaki;
 }
 
 .swal2-popup:has(.hard-mode-btn) img {
@@ -108,7 +130,8 @@
 
 .swal2-popup:has(.hard-mode-btn input:checked) {
   color: white;
-  background: brown;
+  background: salmon;
+  box-shadow: inset 2px 2px 0 0px red, inset -2px -2px 0 2px firebrick,inset 0 -70px 0 6px crimson, inset 0 0 0 6px crimson, inset 0 0 0 12px brown, inset 0 -64px 0 12px brown, inset 0 0 0 6px, inset 0 40px 80px 20px purple;
 }
 
 .swal2-popup:has(.hard-mode-btn input:checked) img {
@@ -141,9 +164,11 @@
   background-size: 80%; 
   background-repeat: no-repeat; 
   background-position: center;
-  border-radius: 16px;
+  border-radius: 24px;
   box-shadow: inset 0 0 0 4px #6a410c, inset 0 0 0 8px chocolate;
   filter: sepia(.5);
+  outline: solid 2px chocolate;
+  outline-offset: -14px;
 }
 
 .swiper-slide p {
@@ -151,10 +176,11 @@
   font-size: 1.3rem;
   background: #6a410c;
   box-shadow: inset 0px 4px 0 0px #6a410c, inset 0 0 0 4px chocolate;
-  color: white;
+  color: lightsalmon;
   padding: .7rem 1.2rem 1rem;
   margin: 0 auto;
   border-radius: 0 0 16px 16px;
+  z-index: 1;
 }
 
 .swiper-slide img {
