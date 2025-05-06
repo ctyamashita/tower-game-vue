@@ -78,7 +78,11 @@
   filter: invert(0);
 }
 
-.swal2-popup:has(.hard-mode-btn) {
+.swal2-popup {
+  background-color: whitesmoke;
+}
+
+.swal2-popup:has(.swal2-icon:empty) {
   background-color: darkkhaki;
 }
 
@@ -119,29 +123,45 @@
   transition: .3s;
 }
 
+.swal2-html-container {
+  overflow: hidden;
+}
+
 .swiper {
   margin: 10px 30px 0;
-  width: 200px;
+  width: 180px;
   height: 300px;
 }
 
 .swiper-slide {
+  display: grid;
+  align-items: center;
+  grid-template-rows: auto 1fr;
   background: burlywood;
+  background-size: 80%; 
+  background-repeat: no-repeat; 
+  background-position: center;
   border-radius: 16px;
-  box-shadow: inset 0 0 0 6px #6a410c;
+  box-shadow: inset 0 0 0 4px #6a410c, inset 0 0 0 8px chocolate;
   filter: sepia(.5);
 }
 
 .swiper-slide p {
   text-transform: capitalize;
-  font-size: 1.5rem;
-  color: #6a410c;
+  font-size: 1.3rem;
+  background: #6a410c;
+  box-shadow: inset 0px 4px 0 0px #6a410c, inset 0 0 0 4px chocolate;
+  color: white;
+  padding: .7rem 1.2rem 1rem;
+  margin: 0 auto;
+  border-radius: 0 0 16px 16px;
+}
+
+.swiper-slide img {
+  width: 80%;
+  margin: auto auto 1.5rem;
 }
 
 .swiper-slide input[type=radio] {
   display: none;
-}
-
-.swiper-slide:has(:checked) {
-  box-shadow: inset 0 0 0 6px red;
 }
