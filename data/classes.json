@@ -20,8 +20,8 @@
 {
   "id": 2,
   "job": "ranger",
-  "hp": 9,
-  "max_hp": 9,
+  "hp": 7,
+  "max_hp": 7,
   "isDead": false,
   "attributes": {
     "atk": 2,
@@ -39,8 +39,8 @@
 {
   "id": 3,
   "job": "ninja",
-  "hp": 9,
-  "max_hp": 9,
+  "hp": 6,
+  "max_hp": 6,
   "isDead": false,
   "attributes": {
     "atk": 2,
@@ -58,8 +58,8 @@
 {
   "id": 4,
   "job": "monk",
-  "hp": 9,
-  "max_hp": 9,
+  "hp": 10,
+  "max_hp": 10,
   "isDead": false,
   "attributes": {
     "atk": 3,
@@ -77,8 +77,8 @@
 {
   "id": 5,
   "job": "necromancer",
-  "hp": 9,
-  "max_hp": 9,
+  "hp": 10,
+  "max_hp": 10,
   "isDead": false,
   "attributes": {
     "atk": 3,
@@ -134,8 +134,8 @@
 {
   "id": 8,
   "job": "mage",
-  "hp": 9,
-  "max_hp": 9,
+  "hp": 8,
+  "max_hp": 8,
   "isDead": false,
   "attributes": {
     "atk": 1,
@@ -153,8 +153,8 @@
 {
   "id": 9,
   "job": "bard",
-  "hp": 9,
-  "max_hp": 9,
+  "hp": 8,
+  "max_hp": 8,
   "isDead": false,
   "attributes": {
     "atk": 2,
