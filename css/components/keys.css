@@ -25,8 +25,8 @@
   border-radius: calc(var(--border-radius)/2);
   /* font-family: Poppins, sans-serif; */
   font-weight: 700;
-  height: max(5vw, 5vh);
-  width: max(5vw, 5vh);
+  height: max(3vw, 5vh);
+  width: max(3vw, 5vh);
   transition: .2s;
 }
 
@@ -46,7 +46,7 @@
   background-color: transparent;
   box-shadow: max(1.7vw,1.7vh) max(1.7vw,1.7vh) 0 max(.75vw, .75vh) rgba(0, 0, 0, .3);
   transition: var(--iso-animation-time);
-  margin: 0 2rem 2.5rem 0;
+  margin: 0 max(3vw,3vh) max(4vw,5vh) 0;
 }
 
 #keys-display.iso button {
