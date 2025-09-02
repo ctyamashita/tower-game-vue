@@ -187,6 +187,7 @@
           </div>
           <div class="modal-footer-cty bg-dark">
             <button id="atk-btn" v-on:click="combatTurn('attack')">Attack</button>
+            <button id="skill-btn" v-on:click="combatTurn('skill')">{{ player.actions[1] }}</button>
             <button id="run-btn" v-on:click="combatTurn('run')">Run</button>
           </div>
         </div>

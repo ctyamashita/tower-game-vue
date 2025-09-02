@@ -176,20 +176,26 @@
 }
 
 .swiper-slide p {
-  text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: .8rem;
   background: #6a410c;
-  box-shadow: inset 0px 4px 0 0px #6a410c, inset 0 0 0 4px chocolate;
+  box-shadow: inset 0px -4px 0 0px #6a410c, inset 0 0 0 4px chocolate;
   color: lightsalmon;
   padding: .4rem 1rem .7rem;
   margin: 0 auto;
-  border-radius: 0 0 16px 16px;
+  border-radius: 16px 16px 0 0;
   z-index: 1;
 }
 
+.swiper-slide p:first-child {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  box-shadow: inset 0px 4px 0 0px #6a410c, inset 0 0 0 4px chocolate;
+  border-radius: 0 0 16px 16px;
+}
+
 .swiper-slide img {
-  width: 80%;
-  margin: auto auto 1.5rem;
+  width: 75%;
+  margin: auto auto 0;
 }
 
 .swiper-slide input[type=radio] {

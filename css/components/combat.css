@@ -137,6 +137,11 @@
 #enemy-model .run-failed { animation: enemy-attack-failed-run calc(var(--turn-animation-time)/2); }
 .night #enemy-model .run-failed { animation: enemy-attack-failed-run-night calc(var(--turn-animation-time)/2); }
 
+/* skill */
+#player-model .heal { 
+  animation: player-heal-hit calc(var(--turn-animation-time));
+}
+
 .player-atk { animation-name: player-attack; }
 .night .player-atk { animation-name: player-attack-night; }
 

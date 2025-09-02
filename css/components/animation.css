@@ -394,6 +394,22 @@
   100% { transform: translateX(0px); filter: brightness(.6) sepia(0.3); }
 }
 
+/* heal */
+
+@keyframes player-heal-hit {
+  0%   { transform: translateX(0px); }
+  10%  { background: radial-gradient(yellowgreen 0%, transparent 20%); }
+  15%  { background: radial-gradient(yellowgreen 15%, transparent 30%); filter: brightness(2) hue-rotate(30deg); }
+  30%  { background: radial-gradient(yellowgreen 30%, transparent 40%); }
+  40%  { background: radial-gradient(yellowgreen 15%, transparent 30%); filter: brightness(1); }
+  45%  { background: radial-gradient(yellowgreen 0%, transparent 20%); }
+  60%  { opacity: 1; filter: brightness(1); }
+  70%  { opacity: 0; transform: translateX(0px); filter: invert(0%);}
+  80%  { opacity: 1; transform: translateX(-10px); filter: invert(70%);}
+  90%  { opacity: 0; }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
 /* enemy taking the attack */
 @keyframes enemy-hit {
   0%   { transform: translateX(0px); }
