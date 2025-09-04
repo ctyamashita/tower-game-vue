@@ -16,7 +16,7 @@
     "attack",
     "Slash"
   ],
-  "skillDescription": "2xATK (can't crit)"
+  "skillDescription": "200% ATK (can't crit)"
 },
 {
   "id": 2,
@@ -36,7 +36,7 @@
     "attack",
     "Bulls Eye"
   ],
-  "skillDescription": "1.5xATK<br>(Sure hit)"
+  "skillDescription": "150% ATK (Sure hit)<br>30% crit chance"
 },
 {
   "id": 3,
@@ -56,7 +56,7 @@
     "attack",
     "Backstab"
   ],
-  "skillDescription": "30% crit chance"
+  "skillDescription": "150% ATK<br>(30% chance) Ignore DEF"
 },
 {
   "id": 4,
@@ -76,7 +76,7 @@
     "attack",
     "Counter"
   ],
-  "skillDescription": "2xDEF<br>ATK + enemy ATK"
+  "skillDescription": "200% DEF<br>ATK + enemy ATK"
 },
 {
   "id": 5,
@@ -96,7 +96,7 @@
     "attack",
     "Bone Shield"
   ],
-  "skillDescription": "+1.2xDEF"
+  "skillDescription": "Reduce dmg to 1"
 },
 {
   "id": 6,
@@ -116,7 +116,7 @@
     "attack",
     "Trio Attack"
   ],
-  "skillDescription": "1.5xATK"
+  "skillDescription": "150% ATK"
 },
 {
   "id": 7,
@@ -136,7 +136,7 @@
     "attack",
     "Heal"
   ],
-  "skillDescription": "+3HP"
+  "skillDescription": "Restore 20% HP"
 },
 {
   "id": 8,
@@ -156,7 +156,7 @@
     "attack",
     "Fire Ball"
   ],
-  "skillDescription": "1.5xMAG"
+  "skillDescription": "150% MAG"
 },
 {
   "id": 9,
