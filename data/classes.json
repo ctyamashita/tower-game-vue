@@ -56,7 +56,7 @@
     "attack",
     "Backstab"
   ],
-  "skillDescription": "150% ATK<br>(30% chance) Ignore DEF"
+  "skillDescription": "150% ATK (30% Ignore DEF)<br>[Night Advantage]"
 },
 {
   "id": 4,
@@ -161,8 +161,8 @@
 {
   "id": 9,
   "job": "bard",
-  "hp": 80,
-  "max_hp": 80,
+  "hp": 8,
+  "max_hp": 8,
   "isDead": false,
   "attributes": {
     "atk": 2,

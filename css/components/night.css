@@ -44,8 +44,8 @@ body:has(.sunset) {
   background: var(--color-floor-low) !important;
 }
 
-.night .tree,
-.night .spot {
+.night:not(.ninja) .tree,
+.night:not(.ninja) .spot {
   opacity: 0;
   transition: opacity 3s;
 }
