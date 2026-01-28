@@ -16,7 +16,9 @@
     "attack",
     "Slash"
   ],
-  "skillDescription": "200% ATK (can't crit)"
+  "skillDescription": "200% ATK (can't crit)",
+  "passiveTitle": "[Champion]",
+  "passiveDescription": "Every 3 battles won, +1 to "
 },
 {
   "id": 2,
@@ -36,7 +38,9 @@
     "attack",
     "Bulls Eye"
   ],
-  "skillDescription": "150% ATK (Sure hit)<br>30% crit chance"
+  "skillDescription": "150% ATK (Sure hit)<br>30% crit chance",
+  "passiveTitle": "[Scout]",
+  "passiveDescription": "Enemy classes are revealed on the map."
 },
 {
   "id": 3,
@@ -56,12 +60,14 @@
     "attack",
     "Backstab"
   ],
-  "skillDescription": "150% ATK (30% Ignore DEF)<br>[Night Advantage]"
+  "skillDescription": "150% ATK (30% Ignore DEF)",
+  "passiveTitle": "[Night Advantage]",
+  "passiveDescription": "At Night, evasion x2 and enemies/trees are visible."
 },
 {
   "id": 4,
   "job": "monk",
-  "hp": 10,
+  "hp": 4,
   "max_hp": 10,
   "isDead": false,
   "attributes": {
@@ -76,7 +82,9 @@
     "attack",
     "Counter"
   ],
-  "skillDescription": "200% DEF<br>ATK + enemy ATK"
+  "skillDescription": "200% DEF<br>ATK + enemy ATK",
+  "passiveTitle": "[Meditate]",
+  "passiveDescription": "Recover 1hp every 3 steps."
 },
 {
   "id": 5,
@@ -96,7 +104,9 @@
     "attack",
     "Bone Shield"
   ],
-  "skillDescription": "Reduce dmg to 1"
+  "skillDescription": "Reduce dmg to 1",
+  "passiveTitle": "[]",
+  "passiveDescription": ""
 },
 {
   "id": 6,
@@ -116,7 +126,9 @@
     "attack",
     "Trio Attack"
   ],
-  "skillDescription": "150% ATK"
+  "skillDescription": "150% ATK",
+  "passiveTitle": "[Forestry]",
+  "passiveDescription": "Restore more hp from trees"
 },
 {
   "id": 7,
@@ -136,7 +148,9 @@
     "attack",
     "Heal"
   ],
-  "skillDescription": "Restore 20% HP"
+  "skillDescription": "Restore 20% HP",
+  "passiveTitle": "[]",
+  "passiveDescription": ""
 },
 {
   "id": 8,
@@ -156,7 +170,9 @@
     "attack",
     "Fire Ball"
   ],
-  "skillDescription": "150% MAG"
+  "skillDescription": "150% MAG",
+  "passiveTitle": "[]",
+  "passiveDescription": ""
 },
 {
   "id": 9,
@@ -176,6 +192,8 @@
     "attack",
     "Stat Up"
   ],
-  "skillDescription": "+20% all stats"
+  "skillDescription": "+20% all stats",
+  "passiveTitle": "[]",
+  "passiveDescription": ""
 }
 ]

@@ -91,6 +91,10 @@
             <small v-cloak>{{player.xp}} / 100</small>
           </span>
         </div>
+        <details class="passive-container">
+          <summary class="passive-title">{{player.passiveTitle}}</summary>
+          <p class="passive-desc">{{player.passiveDescription}}</p>
+        </details>
         <div>
           <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`" v-cloak>attributes{{player.points > 0 ? `(${player.points})` : ''}}</button>
           <table class="stats-table">

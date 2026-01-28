@@ -266,6 +266,14 @@ td.low:has(#player:not(.spawn)) .floor {
     font-size: min(2.5vw, 1rem, 2.5vh);
   }
 
+  .spot img {
+    transform: rotate(-45deg);
+    width: 60%;
+    background: turquoise;
+    border-radius: 50%;
+    filter: invert(1);
+  }
+
   td.low:has(.spot) .floor {
     background: radial-gradient(var(--shadow-color-low) 10%, var(--color-floor-low) 30%);
   }

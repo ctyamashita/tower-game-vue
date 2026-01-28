@@ -147,6 +147,36 @@
   display: none;
 }
 
+#menu .passive-container {
+  background-color: white;
+  border-radius: 8px;
+}
+
+#menu .passive-container:has(.passive-desc:empty) {
+  display: none;
+}
+
+#menu .passive-desc,
+#menu .passive-title {
+  padding: 8px;
+  margin: 0;
+  max-width: 180px;
+}
+
+#menu .passive-container[open] .passive-title {
+  border-radius: 8px 8px 0 0;
+}
+
+#menu .passive-title {
+  border-radius: 8px;
+  background: var(--black);
+  color: white;
+}
+
+#menu .passive-desc {
+  color: dimgray;
+}
+
 .floor-display-container {
   position: absolute;
   top: 16px;
