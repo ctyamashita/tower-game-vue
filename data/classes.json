@@ -161,8 +161,8 @@
 {
   "id": 9,
   "job": "bard",
-  "hp": 8,
-  "max_hp": 8,
+  "hp": 80,
+  "max_hp": 80,
   "isDead": false,
   "attributes": {
     "atk": 2,
@@ -176,6 +176,6 @@
     "attack",
     "Stat Up"
   ],
-  "skillDescription": "+2 all stats"
+  "skillDescription": "+20% all stats"
 }
 ]
