@@ -17,8 +17,9 @@
     "Slash"
   ],
   "skillDescription": "200% ATK (can't crit)",
-  "passiveTitle": "[Champion]",
-  "passiveDescription": "Every 3 battles won, +1 to "
+  "passiveTitle": "Last Standing",
+  "passiveDescription": "Every 3 battles won, +1 to max HP",
+  "shortDescription": "<i class=\"fa-solid fa-angle-up\"></i>HP<br>Balanced"
 },
 {
   "id": 2,
@@ -29,18 +30,19 @@
   "attributes": {
     "atk": 2,
     "def": 2,
-    "agi": 4,
-    "dex": 4,
+    "agi": 3,
+    "dex": 5,
     "mag": 3,
     "luk": 3
   },
   "actions": [
     "attack",
-    "Bulls Eye"
+    "Focused Shot"
   ],
-  "skillDescription": "150% ATK (Sure hit)<br>30% crit chance",
-  "passiveTitle": "[Scout]",
-  "passiveDescription": "Enemy classes are revealed on the map."
+  "skillDescription": "150% ATK (Sure hit), 30% crit chance",
+  "passiveTitle": "Eagle Eye",
+  "passiveDescription": "Enemy classes are revealed on the map.",
+  "shortDescription": "<i class=\"fa-solid fa-angles-up\"></i>DEX<br><i class=\"fa-solid fa-angle-down\"></i>ATK/DEF"
 },
 {
   "id": 3,
@@ -49,25 +51,26 @@
   "max_hp": 6,
   "isDead": false,
   "attributes": {
-    "atk": 2,
+    "atk": 3,
     "def": 1,
     "agi": 5,
     "dex": 3,
     "mag": 3,
-    "luk": 4
+    "luk": 3
   },
   "actions": [
     "attack",
     "Backstab"
   ],
   "skillDescription": "150% ATK (30% Ignore DEF)",
-  "passiveTitle": "[Night Advantage]",
-  "passiveDescription": "At Night, evasion x2 and enemies/trees are visible."
+  "passiveTitle": "Night Vision",
+  "passiveDescription": "At Night, evasion x2 and enemies/trees are visible.",
+  "shortDescription": "<i class=\"fa-solid fa-angles-up\"></i>AGI<br><i class=\"fa-solid fa-angles-down\"></i>DEF"
 },
 {
   "id": 4,
   "job": "monk",
-  "hp": 4,
+  "hp": 10,
   "max_hp": 10,
   "isDead": false,
   "attributes": {
@@ -83,8 +86,9 @@
     "Counter"
   ],
   "skillDescription": "200% DEF<br>ATK + enemy ATK",
-  "passiveTitle": "[Meditate]",
-  "passiveDescription": "Recover 1hp every 3 steps."
+  "passiveTitle": "Meditate",
+  "passiveDescription": "Recover 1hp every 3 steps.",
+  "shortDescription": "<i class=\"fa-solid fa-angle-up\"></i>DEF/MAG<br><i class=\"fa-solid fa-angle-down\"></i>AGI/DEX"
 },
 {
   "id": 5,
@@ -105,8 +109,9 @@
     "Bone Shield"
   ],
   "skillDescription": "Reduce dmg to 1",
-  "passiveTitle": "[]",
-  "passiveDescription": ""
+  "passiveTitle": "Night Walker",
+  "passiveDescription": "At night, +20% all stats",
+  "shortDescription": "<i class=\"fa-solid fa-angles-up\"></i>DEX/MAG<br><i class=\"fa-solid fa-angles-down\"></i>AGI/LUK"
 },
 {
   "id": 6,
@@ -127,8 +132,9 @@
     "Trio Attack"
   ],
   "skillDescription": "150% ATK",
-  "passiveTitle": "[Forestry]",
-  "passiveDescription": "Restore more hp from trees"
+  "passiveTitle": "Forestry",
+  "passiveDescription": "Restore more hp from trees",
+  "shortDescription": "<i class=\"fa-solid fa-angle-up\"></i>ATK/AGI<br><i class=\"fa-solid fa-angle-down\"></i>DEF/MAG"
 },
 {
   "id": 7,
@@ -149,8 +155,9 @@
     "Heal"
   ],
   "skillDescription": "Restore 20% HP",
-  "passiveTitle": "[]",
-  "passiveDescription": ""
+  "passiveTitle": "Blessing",
+  "passiveDescription": "Extra 2 attribute points every Lvl Up",
+  "shortDescription": "<i class=\"fa-solid fa-angle-up\"></i>DEF/MAG<br><i class=\"fa-solid fa-angle-down\"></i>ATK/AGI"
 },
 {
   "id": 8,
@@ -171,8 +178,9 @@
     "Fire Ball"
   ],
   "skillDescription": "150% MAG",
-  "passiveTitle": "[]",
-  "passiveDescription": ""
+  "passiveTitle": "Quick Learner",
+  "passiveDescription": "+10 XP every victory",
+  "shortDescription": "<i class=\"fa-solid fa-angles-down\"></i>ATK/DEF<br><i class=\"fa-solid fa-angles-up\"></i>DEX/MAG"
 },
 {
   "id": 9,
@@ -193,7 +201,8 @@
     "Stat Up"
   ],
   "skillDescription": "+20% all stats",
-  "passiveTitle": "[]",
-  "passiveDescription": ""
+  "passiveTitle": "Nimble",
+  "passiveDescription": "Escape garanteed",
+  "shortDescription": "<i class=\"fa-solid fa-angle-up\"></i>MAG/LUK<br><i class=\"fa-solid fa-angle-down\"></i>ATK/DEF"
 }
 ]

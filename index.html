@@ -85,16 +85,19 @@
           </span>
         </div>
         <div class="bar-container">
+          <i class="fa-solid fa-bolt"></i>
+          <span class="bar">
+            <span class="bar-fill" :style="`width: ${(skillPoints/3) * 100}%`"></span>
+            <small v-cloak>{{skillPoints}} / 3</small>
+          </span>
+        </div>
+        <div class="bar-container">
           <i class="fa-solid fa-book"></i>
           <span class="bar">
             <span class="bar-fill" :style="`width: ${player.xp}%`"></span>
             <small v-cloak>{{player.xp}} / 100</small>
           </span>
         </div>
-        <details class="passive-container">
-          <summary class="passive-title">{{player.passiveTitle}}</summary>
-          <p class="passive-desc">{{player.passiveDescription}}</p>
-        </details>
         <div>
           <button v-on:click="expand" :class="`stats-title ${player.points > 0 ? 'points-available' : ''}`" v-cloak>attributes{{player.points > 0 ? `(${player.points})` : ''}}</button>
           <table class="stats-table">
@@ -192,7 +195,7 @@
           </div>
           <div class="modal-footer-cty bg-dark">
             <button id="atk-btn" v-on:click="combatTurn('attack')">Attack</button>
-            <button id="skill-btn" v-on:click="combatTurn('skill')">{{ player.actions[1] }}</button>
+            <button id="skill-btn" v-on:click="combatTurn('skill')">{{ player.actions[1] }}/{{skillPoints}}</button>
             <button id="run-btn" v-on:click="combatTurn('run')">Run</button>
           </div>
         </div>
